@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import MMDrawerController
 
 class RockPaperScissorsViewController: UIViewController {
     
+    @IBAction func HamButtonTapped(_ sender: Any) {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)    }
     var choise : Int = 0 //0 - Rock | 1 - Paper | Scissors
     
     

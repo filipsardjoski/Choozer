@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import MMDrawerController
+
 
 class DiceRollViewController: UIViewController {
     
-    var dice : Int = 0
+    
+    @IBAction func HamButtonPressed(_ sender: Any) {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)    }
     
     @IBOutlet weak var DiceRollLabel: UILabel!
     @IBAction func RollButtonIsPressed(_ sender: Any) {
-        dice = Int(arc4random_uniform(6))
+       let dice = Int(arc4random_uniform(6))
         DiceRollLabel.text = String (dice + 1)
     }
     

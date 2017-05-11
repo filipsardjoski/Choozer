@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import MMDrawerController
 
 
 class CoinFlipViewController: UIViewController {
+    @IBAction func HamButtonTapped(_ sender: Any) {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
+        
+
+    }
     
     var coin : Int = 0 //0 - Heads | 1 - Tails
     

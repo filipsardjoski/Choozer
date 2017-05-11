@@ -7,15 +7,30 @@
 //
 
 import UIKit
+import MMDrawerController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var centerContainer: MMDrawerController?
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftViewController = mainStoryboard.instantiateViewController(withIdentifier: "HamburgerTableViewController") as! HamburgerTableViewController
+        let centerViewController = mainStoryboard.instantiateViewController(withIdentifier: "CoinFlipViewController") as! CoinFlipViewController
+        let leftSideNav = UINavigationController(rootViewController: leftViewController)
+        let centerNav = UINavigationController(rootViewController: centerViewController)
+        centerContainer = MMDrawerController(center: centerNav, leftDrawerViewController: leftSideNav)
+        centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.panningCenterView
+        centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.panningCenterView
+        
+        window!.rootViewController = centerContainer
+        window!.makeKeyAndVisible()
+        
         return true
     }
 
