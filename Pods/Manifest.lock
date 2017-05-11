@@ -1,3 +1,23 @@
-PODFILE CHECKSUM: 27c7c1f505e9258ef3407a495e8d27a7e8918c1a
+PODS:
+  - MMDrawerController (0.5.7):
+    - MMDrawerController/Core (= 0.5.7)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
+    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
+    - MMDrawerController/Subclass (= 0.5.7)
+  - MMDrawerController/Core (0.5.7)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.5.7):
+    - MMDrawerController/Core
+
+DEPENDENCIES:
+  - MMDrawerController (~> 0.5.7)
+
+SPEC CHECKSUMS:
+  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+
+PODFILE CHECKSUM: ee1311c14cfe19e09fc78f6b80241dd4a744e90e
 
 COCOAPODS: 1.2.1

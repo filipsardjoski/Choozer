@@ -7,14 +7,6 @@ target 'ProektMobilniAplikacii' do
 
   # Pods for ProektMobilniAplikacii
 
-  target 'ProektMobilniAplikaciiTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'ProektMobilniAplikaciiUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+	 pod 'MMDrawerController', '~> 0.5.7'
 
 end
