@@ -31,9 +31,16 @@ class PickFromListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func pickOneButtonIsPressed(_ sender: Any) {
+        
+        //Ako nema proverkava crashnuva app
+        if (list.count<1){
         let random = arc4random_uniform(UInt32(list.count))
         pickedItemLabel.text = list[Int(random)]
         self.insertItemTextField.resignFirstResponder()
+        }
+        else{
+        insertItemTextField.text=""
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
