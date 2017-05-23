@@ -11,7 +11,7 @@ import MMDrawerController
 
 class HamburgerTableViewController: UITableViewController {
     
-    var Meni: [String] = ["Coin flip","Dice roll","Rock Paper Scissors","Yes/No","Pick from List"]
+    var Meni: [String] = ["Coin flip","Dice roll","Yes/No","Pick from List"]
     
     
     
@@ -92,7 +92,7 @@ class HamburgerTableViewController: UITableViewController {
             
             break;
             
-            
+       /*
         case 2:
             
             let centerViewController = self.storyboard?.instantiateViewController(withIdentifier: "RockPaperScissorsViewController") as! RockPaperScissorsViewController
@@ -104,8 +104,8 @@ class HamburgerTableViewController: UITableViewController {
             
             break;
             
-            
-        case 3:
+        */
+        case 2:
             
             let centerViewController = self.storyboard?.instantiateViewController(withIdentifier: "YesNoViewController") as! YesNoViewController
             let centerNavController = UINavigationController(rootViewController: centerViewController)
@@ -117,7 +117,7 @@ class HamburgerTableViewController: UITableViewController {
             break;
             
             
-        case 4:
+        case 3:
             
             let centerViewController = self.storyboard?.instantiateViewController(withIdentifier: "PickFromListViewController") as! PickFromListViewController
             let centerNavController = UINavigationController(rootViewController: centerViewController)
