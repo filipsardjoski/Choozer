@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owz-IN-kbc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owz-IN-kbc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -225,7 +225,7 @@
                                         <rect key="frame" x="0.0" y="28" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EY1-zH-oZ7" id="e7J-g7-qty">
-                                            <rect key="frame" x="0.0" y="0.0" width="276" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="276" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mun-4Z-hwi">
@@ -300,36 +300,52 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coin Flip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slP-VT-gOf">
                                 <rect key="frame" x="145" y="172" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8Q-8y-vDw">
-                                <rect key="frame" x="172" y="393" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Flip"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8Q-8y-vDw">
+                                <rect key="frame" x="152" y="408" width="71" height="54"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Flip" image="refresh-256"/>
                                 <connections>
                                     <action selector="FlipButtonIsPressed:" destination="NJg-p3-UY1" eventType="touchUpInside" id="dpb-Ar-Cwu"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-Au-AU8">
+                                <rect key="frame" x="97" y="151" width="180" height="170"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="opas" translatesAutoresizingMaskIntoConstraints="NO" id="rD9-ub-YfG">
+                                <rect key="frame" x="97" y="151" width="180" height="170"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glava" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Vc-Y3w">
+                                <rect key="frame" x="97" y="151" width="180" height="170"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Gwh-UM-rmf">
                         <barButtonItem key="leftBarButtonItem" image="h_icon" id="Aok-Lh-eFp">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
-                                <action selector="HamButtonTapped:" destination="NJg-p3-UY1" id="6IB-wK-kLy"/>
+                                <action selector="HamButtonTapped:" destination="NJg-p3-UY1" id="ckg-ci-lMk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="CoinFlipLabel" destination="slP-VT-gOf" id="xhi-Dt-xmE"/>
+                        <outlet property="gifce" destination="MqP-Au-AU8" id="IWC-Rr-0JT"/>
+                        <outlet property="heads" destination="rD9-ub-YfG" id="il1-r1-XgV"/>
+                        <outlet property="tails" destination="rcD-Vc-Y3w" id="TTB-gg-dfv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ce4-w6-jpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2452" y="-663"/>
+            <point key="canvasLocation" x="-2452" y="-663.41829085457277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="drA-T8-gSr">
@@ -442,6 +458,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="glava" width="373" height="365"/>
         <image name="h_icon" width="32" height="31"/>
+        <image name="opas" width="368" height="362"/>
+        <image name="refresh-256" width="256" height="256"/>
     </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>
