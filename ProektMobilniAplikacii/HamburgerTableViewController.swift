@@ -17,6 +17,7 @@ class HamburgerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title="ImeNaApp"
         
         self.tableView.backgroundColor = UIColor.black
         self.tableView.separatorStyle = .none
