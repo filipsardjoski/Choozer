@@ -23,42 +23,54 @@ class CoinFlipViewController: UIViewController {
     @IBOutlet weak var heads: UIImageView!
     @IBOutlet weak var tails: UIImageView!
     
-    
+    @IBOutlet weak var CoinFlipLabel: UILabel!
+    @IBOutlet weak var outl: UIButton!
     
     
     var coin : Int = 0 //0 - Heads | 1 - Tails
     
-    @IBOutlet weak var CoinFlipLabel: UILabel!
+    
     @IBAction func FlipButtonIsPressed(_ sender: Any) {
+        outl.isHidden=true
+        self.heads.isHidden=true
+        self.tails.isHidden=true
+        self.gifce.isHidden=false
         coin = Int(arc4random_uniform(2))
+        CoinFlipLabel.text=""
+       
         if (coin == 0) { //Heads
-            CoinFlipLabel.text = "Heads"
-            self.heads.isHidden=true
-            self.tails.isHidden=true
-            self.gifce.isHidden=false
+            //CoinFlipLabel.text = "Heads"
+            //self.heads.isHidden=true
+            //self.tails.isHidden=true
+            //self.gifce.isHidden=false
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 // do after 1.5s
+                self.CoinFlipLabel.text = "Heads!!"
                 self.gifce.isHidden=true
                 self.heads.isHidden=false
+                self.outl.isHidden=false
                 
             }
             
         } else {
-            CoinFlipLabel.text = "Tails"
-            self.heads.isHidden=true
-            self.gifce.isHidden=false
+            //CoinFlipLabel.text = "Tails"
+            //self.heads.isHidden=true
+            //self.tails.isHidden=true
+            //self.gifce.isHidden=false
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 // do after 1.5s
+                self.CoinFlipLabel.text = "Tails!!"
                 self.gifce.isHidden=true
                 self.tails.isHidden=false
+                self.outl.isHidden=false
                 
             }
-            
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        CoinFlipLabel.text=""
         
         self.view.backgroundColor = UIColor.black
         gifce.loadGif(name: "he")

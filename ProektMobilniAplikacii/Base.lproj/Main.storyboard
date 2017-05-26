@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -298,35 +299,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coin Flip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slP-VT-gOf">
-                                <rect key="frame" x="145" y="172" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slP-VT-gOf">
+                                <rect key="frame" x="74" y="142" width="227" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="K75-dC-9tt"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Coin Flip">
+                                        <attributes>
+                                            <color key="NSColor" red="0.65230131149291992" green="0.84336662292480469" blue="0.52052062749862671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="26" name=".SFNSDisplay"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8Q-8y-vDw">
-                                <rect key="frame" x="152" y="408" width="71" height="54"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8Q-8y-vDw">
+                                <rect key="frame" x="153.5" y="492" width="71" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="URt-vy-kJe"/>
+                                    <constraint firstAttribute="width" constant="71" id="x3s-s5-PQr"/>
+                                </constraints>
                                 <state key="normal" title="Flip" image="refresh-256"/>
                                 <connections>
                                     <action selector="FlipButtonIsPressed:" destination="NJg-p3-UY1" eventType="touchUpInside" id="dpb-Ar-Cwu"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-Au-AU8">
-                                <rect key="frame" x="97" y="151" width="180" height="170"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opas" translatesAutoresizingMaskIntoConstraints="NO" id="rD9-ub-YfG">
+                                <rect key="frame" x="99" y="244" width="180" height="170"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="opas" translatesAutoresizingMaskIntoConstraints="NO" id="rD9-ub-YfG">
-                                <rect key="frame" x="97" y="151" width="180" height="170"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glava" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Vc-Y3w">
+                                <rect key="frame" x="99" y="243" width="180" height="170"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glava" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Vc-Y3w">
-                                <rect key="frame" x="97" y="151" width="180" height="170"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-Au-AU8">
+                                <rect key="frame" x="99" y="244" width="180" height="170"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rHw-dw-ZdL" firstAttribute="top" secondItem="U8Q-8y-vDw" secondAttribute="bottom" constant="121" id="7wl-vo-MKe"/>
+                            <constraint firstItem="rD9-ub-YfG" firstAttribute="top" secondItem="MqP-Au-AU8" secondAttribute="top" id="CZ5-DA-CiN"/>
+                            <constraint firstItem="rcD-Vc-Y3w" firstAttribute="top" secondItem="slP-VT-gOf" secondAttribute="bottom" constant="39" id="HKi-lM-ayg"/>
+                            <constraint firstItem="slP-VT-gOf" firstAttribute="centerX" secondItem="B3x-K7-CNu" secondAttribute="centerX" id="HcD-SS-I2s"/>
+                            <constraint firstItem="rD9-ub-YfG" firstAttribute="bottom" secondItem="MqP-Au-AU8" secondAttribute="bottom" id="QEm-He-Wii"/>
+                            <constraint firstItem="rD9-ub-YfG" firstAttribute="top" secondItem="slP-VT-gOf" secondAttribute="bottom" constant="40" id="T7i-Sg-KMl"/>
+                            <constraint firstItem="rcD-Vc-Y3w" firstAttribute="leading" secondItem="rD9-ub-YfG" secondAttribute="leading" id="Uid-4O-B91"/>
+                            <constraint firstItem="MqP-Au-AU8" firstAttribute="centerX" secondItem="U8Q-8y-vDw" secondAttribute="centerX" id="Zpo-hP-FNl"/>
+                            <constraint firstItem="slP-VT-gOf" firstAttribute="top" secondItem="2ht-9z-sSe" secondAttribute="bottom" constant="78" id="aYA-0K-nge"/>
+                            <constraint firstItem="slP-VT-gOf" firstAttribute="leading" secondItem="B3x-K7-CNu" secondAttribute="leadingMargin" constant="58" id="c2B-ah-SjS"/>
+                            <constraint firstItem="rcD-Vc-Y3w" firstAttribute="leading" secondItem="B3x-K7-CNu" secondAttribute="leadingMargin" constant="83" id="khE-dG-XZ8"/>
+                            <constraint firstItem="rcD-Vc-Y3w" firstAttribute="trailing" secondItem="rD9-ub-YfG" secondAttribute="trailing" id="nJO-YP-PuB"/>
+                            <constraint firstItem="U8Q-8y-vDw" firstAttribute="top" secondItem="MqP-Au-AU8" secondAttribute="bottom" constant="78" id="nv9-Gh-nIz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rcD-Vc-Y3w" secondAttribute="trailing" constant="80" id="pcV-h8-vow"/>
+                            <constraint firstItem="rD9-ub-YfG" firstAttribute="leading" secondItem="MqP-Au-AU8" secondAttribute="leading" id="tIF-Ip-pQ4"/>
+                            <constraint firstItem="rD9-ub-YfG" firstAttribute="trailing" secondItem="MqP-Au-AU8" secondAttribute="trailing" id="ucS-TU-2Ov"/>
+                            <constraint firstItem="U8Q-8y-vDw" firstAttribute="top" secondItem="rcD-Vc-Y3w" secondAttribute="bottom" constant="79" id="yIT-Lk-v1z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Gwh-UM-rmf">
                         <barButtonItem key="leftBarButtonItem" image="h_icon" id="Aok-Lh-eFp">
@@ -340,6 +369,7 @@
                         <outlet property="CoinFlipLabel" destination="slP-VT-gOf" id="xhi-Dt-xmE"/>
                         <outlet property="gifce" destination="MqP-Au-AU8" id="IWC-Rr-0JT"/>
                         <outlet property="heads" destination="rD9-ub-YfG" id="il1-r1-XgV"/>
+                        <outlet property="outl" destination="U8Q-8y-vDw" id="eD0-Ea-nSe"/>
                         <outlet property="tails" destination="rcD-Vc-Y3w" id="TTB-gg-dfv"/>
                     </connections>
                 </viewController>
