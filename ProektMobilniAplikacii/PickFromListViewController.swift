@@ -75,6 +75,7 @@ class PickFromListViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title="Pick from list"
         self.itemListTableView.delegate = self
         self.itemListTableView.dataSource = self
         // Do any additional setup after loading the view.

@@ -70,6 +70,7 @@ class CoinFlipViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title="Coin flip"
         CoinFlipLabel.text=""
         
         self.view.backgroundColor = UIColor.black

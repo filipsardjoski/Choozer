@@ -31,6 +31,7 @@ class YesNoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title="Yes/No"
 
         // Do any additional setup after loading the view.
     }
