@@ -157,26 +157,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nu-kd-qzJ">
-                                <rect key="frame" x="172" y="399" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pick"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nu-kd-qzJ">
+                                <rect key="frame" x="154" y="492" width="71" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="NeF-fa-ITy"/>
+                                    <constraint firstAttribute="height" constant="54" id="gvi-GE-lRV"/>
+                                </constraints>
+                                <state key="normal" title="Pick" image="refresh-256"/>
                                 <connections>
                                     <action selector="PickButtonIsPressed:" destination="L3e-0S-VxP" eventType="touchUpInside" id="Qlp-v5-sQh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes/No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-I1-REc">
-                                <rect key="frame" x="160" y="176" width="55" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes/No" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-I1-REc">
+                                <rect key="frame" x="74" y="139" width="227" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="kBE-Aj-7yb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Like-icon180" translatesAutoresizingMaskIntoConstraints="NO" id="zRm-qE-nNN">
+                                <rect key="frame" x="99" y="224" width="180" height="170"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Like-icon" translatesAutoresizingMaskIntoConstraints="NO" id="j3s-U4-KF8">
+                                <rect key="frame" x="99" y="224" width="180" height="170"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ai2-G5-Keg">
+                                <rect key="frame" x="99" y="224" width="180" height="170"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ai2-G5-Keg" firstAttribute="trailing" secondItem="j3s-U4-KF8" secondAttribute="trailing" id="4yB-lO-Wkg"/>
+                            <constraint firstItem="ai2-G5-Keg" firstAttribute="leading" secondItem="zRm-qE-nNN" secondAttribute="leading" id="6Jf-Cx-N4W"/>
+                            <constraint firstItem="j3s-U4-KF8" firstAttribute="leading" secondItem="zRm-qE-nNN" secondAttribute="leading" id="6SY-zG-1fv"/>
+                            <constraint firstItem="zRm-qE-nNN" firstAttribute="top" secondItem="j3s-U4-KF8" secondAttribute="top" id="6UL-ol-Izy"/>
+                            <constraint firstItem="MKF-I1-REc" firstAttribute="top" secondItem="m5w-zA-uJ2" secondAttribute="bottom" constant="75" id="8qO-s0-awl"/>
+                            <constraint firstItem="MKF-I1-REc" firstAttribute="centerX" secondItem="z25-64-Tdc" secondAttribute="centerX" id="N9d-w3-geX"/>
+                            <constraint firstItem="S1C-O4-EcS" firstAttribute="top" secondItem="2Nu-kd-qzJ" secondAttribute="bottom" constant="121" id="OfW-no-tBA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j3s-U4-KF8" secondAttribute="trailing" constant="80" id="WX2-z3-bJG"/>
+                            <constraint firstItem="j3s-U4-KF8" firstAttribute="bottom" secondItem="zRm-qE-nNN" secondAttribute="bottom" id="X4F-f5-RVa"/>
+                            <constraint firstItem="zRm-qE-nNN" firstAttribute="centerX" secondItem="2Nu-kd-qzJ" secondAttribute="centerX" id="c8C-5d-UbG"/>
+                            <constraint firstItem="ai2-G5-Keg" firstAttribute="bottom" secondItem="j3s-U4-KF8" secondAttribute="bottom" id="eup-9o-jHj"/>
+                            <constraint firstItem="2Nu-kd-qzJ" firstAttribute="top" secondItem="j3s-U4-KF8" secondAttribute="bottom" constant="98" id="i38-ih-fbY"/>
+                            <constraint firstItem="j3s-U4-KF8" firstAttribute="trailing" secondItem="zRm-qE-nNN" secondAttribute="trailing" id="lmL-FE-4pZ"/>
+                            <constraint firstItem="j3s-U4-KF8" firstAttribute="top" secondItem="MKF-I1-REc" secondAttribute="bottom" constant="23" id="sXX-Ec-6OD"/>
+                            <constraint firstItem="MKF-I1-REc" firstAttribute="leading" secondItem="z25-64-Tdc" secondAttribute="leadingMargin" constant="58" id="uZa-SK-jma"/>
+                            <constraint firstItem="ai2-G5-Keg" firstAttribute="top" secondItem="j3s-U4-KF8" secondAttribute="top" id="utt-8t-zPe"/>
+                            <constraint firstItem="ai2-G5-Keg" firstAttribute="leading" secondItem="z25-64-Tdc" secondAttribute="leadingMargin" constant="83" id="wf6-hv-0cd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xEv-5r-AkC">
                         <barButtonItem key="leftBarButtonItem" image="h_icon" id="d9g-Gt-gLQ">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="HamButtonTapped:" destination="L3e-0S-VxP" id="xT2-nn-zqz"/>
                             </connections>
@@ -184,6 +218,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="YesNoLabel" destination="MKF-I1-REc" id="oGK-y4-TY3"/>
+                        <outlet property="like0" destination="j3s-U4-KF8" id="46S-dL-ofd"/>
+                        <outlet property="like180" destination="zRm-qE-nNN" id="9dq-jh-c0n"/>
+                        <outlet property="likegif" destination="ai2-G5-Keg" id="YAj-aM-1PQ"/>
+                        <outlet property="outl" destination="2Nu-kd-qzJ" id="NQ4-7l-Y1X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyn-lT-4eP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,6 +526,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Like-icon" width="120" height="120"/>
+        <image name="Like-icon180" width="120" height="120"/>
         <image name="glava" width="373" height="365"/>
         <image name="h_icon" width="32" height="31"/>
         <image name="opas" width="368" height="362"/>

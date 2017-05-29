@@ -11,6 +11,12 @@ import MMDrawerController
 
 class YesNoViewController: UIViewController {
     
+    @IBOutlet weak var like0: UIImageView!
+    @IBOutlet weak var like180: UIImageView!
+    @IBOutlet weak var likegif: UIImageView!
+    @IBOutlet weak var outl: UIButton!
+    @IBOutlet weak var YesNoLabel: UILabel!
+    
     
     @IBAction func HamButtonTapped(_ sender: Any) {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -19,19 +25,50 @@ class YesNoViewController: UIViewController {
     
     var choise : Int = 0 //0 - Yes | 1 - No
     
-    @IBOutlet weak var YesNoLabel: UILabel!
+    
     @IBAction func PickButtonIsPressed(_ sender: Any) {
+        outl.isHidden=true
+        self.like180.isHidden=true
+        self.likegif.isHidden=false
+        self.like0.isHidden=true
+        YesNoLabel.text=""
+        
+        
         choise = Int(arc4random_uniform(2))
         if (choise == 0) { //Yes
-            YesNoLabel.text = "Yes"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                // do after 1.5s
+                self.likegif.isHidden=true
+                self.like0.isHidden=false
+                self.like180.isHidden=true
+                self.YesNoLabel.text = "Yes!!"
+                self.outl.isHidden=false
+            }
         } else { //No
-            YesNoLabel.text = "No"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                // do after 1.5s
+                self.likegif.isHidden=true
+                self.like180.isHidden=false
+                self.like0.isHidden=true
+                self.YesNoLabel.text = "No!!"
+                self.outl.isHidden=false
+            }
+            
+            
         }
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="Yes/No"
+        
+        YesNoLabel.text=""
+        likegif.loadGif(name: "likegifspeed")
+        self.view.backgroundColor=UIColor.gray
+        like0.isHidden=false
+        like180.isHidden=true
+        likegif.isHidden=true
 
         // Do any additional setup after loading the view.
     }
