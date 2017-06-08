@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="111" y="37"/>
         </scene>
-        <!--Rock Paper Scissors View Controller-->
+        <!--Red Black View Controller-->
         <scene sceneID="iCN-pM-xFm">
             <objects>
-                <viewController storyboardIdentifier="RockPaperScissorsViewController" id="UCg-ya-HXh" customClass="RockPaperScissorsViewController" customModule="ProektMobilniAplikacii" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedBlackViewController" id="UCg-ya-HXh" customClass="RedBlackViewController" customModule="ProektMobilniAplikacii" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XDy-6U-ucZ"/>
                         <viewControllerLayoutGuide type="bottom" id="AIk-il-eJZ"/>
@@ -112,38 +112,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNs-FE-2Xo">
-                                <rect key="frame" x="172" y="429" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedBlackBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0Dl-AE-qEd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7A-E9-ISD">
+                                <rect key="frame" x="158" y="355" width="58" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pick"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Roll"/>
                                 <connections>
-                                    <action selector="PickButtonIsPressed:" destination="UCg-ya-HXh" eventType="touchUpInside" id="ao9-oY-m1k"/>
+                                    <action selector="pickButtonPressed:" destination="UCg-ya-HXh" eventType="touchUpInside" id="A4r-4V-POu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rock/Paper/Scissors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVx-hE-dTj">
-                                <rect key="frame" x="108" y="165" width="158" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHt-td-nyF">
+                                <rect key="frame" x="67" y="141" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEl-Xh-g5n">
+                                <rect key="frame" x="67" y="196" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Dl-AE-qEd" secondAttribute="trailing" id="0su-dg-0zW"/>
+                            <constraint firstItem="AIk-il-eJZ" firstAttribute="top" secondItem="0Dl-AE-qEd" secondAttribute="bottom" id="Rge-HN-0LQ"/>
+                            <constraint firstItem="0Dl-AE-qEd" firstAttribute="leading" secondItem="BGk-rV-Vcf" secondAttribute="leading" id="oRi-M7-BQ5"/>
+                            <constraint firstItem="0Dl-AE-qEd" firstAttribute="top" secondItem="XDy-6U-ucZ" secondAttribute="bottom" id="xDw-69-1IJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HNF-3O-g3C">
                         <barButtonItem key="leftBarButtonItem" image="h_icon" id="0d3-JE-qjQ">
                             <connections>
-                                <action selector="HamButtonTapped:" destination="UCg-ya-HXh" id="R73-ur-wR1"/>
+                                <action selector="HamButtonTapped:" destination="UCg-ya-HXh" id="8Bq-hR-90b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="RockPaperScissorsLabel" destination="aVx-hE-dTj" id="vRV-i7-FUH"/>
+                        <outlet property="colorView" destination="PEl-Xh-g5n" id="Ei5-68-ak1"/>
+                        <outlet property="resultLabel" destination="aHt-td-nyF" id="gSA-V2-5Ai"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VsJ-Ic-K65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2415" y="942"/>
+            <point key="canvasLocation" x="-2415.1999999999998" y="941.37931034482767"/>
         </scene>
         <!--Yes No View Controller-->
         <scene sceneID="6o5-RQ-qEA">
@@ -559,6 +574,7 @@
     <resources>
         <image name="Like-icon" width="120" height="120"/>
         <image name="Like-icon180" width="120" height="120"/>
+        <image name="RedBlackBackground" width="1500" height="1500"/>
         <image name="glava" width="373" height="365"/>
         <image name="h_icon" width="32" height="31"/>
         <image name="opas" width="368" height="362"/>
