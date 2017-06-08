@@ -443,23 +443,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOi-nt-8NH">
-                                <rect key="frame" x="172" y="408" width="30" height="30"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="H4l-cP-3pZ">
+                                <rect key="frame" x="117" y="99" width="141" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Roll"/>
+                                <segments>
+                                    <segment title="One Die"/>
+                                    <segment title="Two Dice"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.029831843470767838" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="RollButtonIsPressed:" destination="esJ-gi-fG9" eventType="touchUpInside" id="6c1-mb-jEQ"/>
+                                    <action selector="segmentedPickerPressed:" destination="esJ-gi-fG9" eventType="valueChanged" id="6QG-Qg-MOW"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLo-Si-9KQ">
+                                <rect key="frame" x="157" y="356" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Roll Dice">
+                                    <color key="titleColor" red="1" green="0.039765733839813522" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollDicePressed:" destination="esJ-gi-fG9" eventType="touchUpInside" id="SQ4-yI-l3C"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1V-s7-S4L">
-                                <rect key="frame" x="166" y="182" width="35" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkH-J3-1tw">
+                                <rect key="frame" x="0.0" y="172" width="375" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRv-Zy-glN">
+                                <rect key="frame" x="142" y="230" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yK9-ZT-Y22">
+                                <rect key="frame" x="78" y="230" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KYB-Z5-2u0">
+                                <rect key="frame" x="207" y="230" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="p6m-Me-vJQ">
                         <barButtonItem key="leftBarButtonItem" image="h_icon" id="qRE-fi-lEa">
@@ -469,12 +496,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="DiceRollLabel" destination="U1V-s7-S4L" id="b6e-ZN-XuA"/>
+                        <outlet property="dice_1" destination="rRv-Zy-glN" id="2HG-Xi-aQb"/>
+                        <outlet property="dice_2_1" destination="yK9-ZT-Y22" id="c69-m5-eMa"/>
+                        <outlet property="dice_2_2" destination="KYB-Z5-2u0" id="sGl-TH-5Qb"/>
+                        <outlet property="resultLabel" destination="vkH-J3-1tw" id="gWl-Fn-pXI"/>
+                        <outlet property="segmentedPicker" destination="H4l-cP-3pZ" id="zxJ-2V-rZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rof-8z-ggF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2414" y="143"/>
+            <point key="canvasLocation" x="-2415.1999999999998" y="142.57871064467767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YXt-Pv-ABr">
