@@ -77,11 +77,16 @@ class DiceRollViewController: UIViewController {
         }
     }
     
+    
+    
+    
     @IBAction func HamButtonPressed(_ sender: Any) {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

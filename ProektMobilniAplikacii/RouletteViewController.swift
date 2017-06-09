@@ -21,8 +21,14 @@ class RouletteViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var colorView: UIImageView!
     @IBOutlet weak var roulette: UIImageView!
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var buttonOutlet: UIButton!
     
     @IBAction func pickButtonPressed(_ sender: Any) {
+        
+        buttonOutlet.isHidden=true
+        startLabel.isHidden=true
+        resultLabel.text=""
         
         colorView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         
@@ -54,26 +60,49 @@ class RouletteViewController: UIViewController {
         let randomNumber = Int(arc4random_uniform(38)) + 1
         
         if (randomNumber == 0) { //00
-            colorView.backgroundColor = UIColor.green
-            resultLabel.text = "00"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.colorView.backgroundColor = UIColor.init(red: 0.10, green: 0.47, blue: 0.09, alpha: 1.0)
+                self.resultLabel.text = "00"
+                self.buttonOutlet.isHidden=false
+            }
+
+            
         } else if (randomNumber == 1) { //0
-            colorView.backgroundColor = UIColor.green
-            resultLabel.text = "0"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.colorView.backgroundColor = UIColor.init(red: 0.10, green: 0.47, blue: 0.09, alpha: 1.0)
+                self.resultLabel.text = "0"
+                self.buttonOutlet.isHidden=false
+            }
+            
         } else { //number = randomNumber - 1
-            let number = randomNumber - 1
-            var isBlack = false
-            for i in blackNumbers {
-                if (number == i) { //black
-                    colorView.backgroundColor = UIColor.black
-                    resultLabel.text = String(number)
-                    isBlack = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1)
+                    {
+                        let number = randomNumber - 1
+                        var isBlack = false
+                        for i in self.blackNumbers
+                        {
+                            if (number == i)
+                            { //black
+                                //  DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                self.colorView.backgroundColor = UIColor.black
+                                self.resultLabel.text = String(number)
+                                self.buttonOutlet.isHidden=false
+                                isBlack = true
+                                // }
+                    
+                            }
+                        }
+                if (isBlack == false)
+                    {
+                        //  DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            self.colorView.backgroundColor = UIColor.red
+                            self.resultLabel.text = String(number)
+                            self.buttonOutlet.isHidden=false
+                        // }
+                
+                        }
+                    }
                 }
-            }
-            if (isBlack == false) {
-                colorView.backgroundColor = UIColor.red
-                resultLabel.text = String(number)
-            }
-        }
     }
     
     override func viewDidLoad() {
@@ -81,6 +110,7 @@ class RouletteViewController: UIViewController {
         self.title = "Roulette"
         
         colorView.backgroundColor = nil
+        startLabel.isHidden=false
         resultLabel.text = ""
         
         // Do any additional setup after loading the view.
