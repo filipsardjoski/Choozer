@@ -150,6 +150,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HNF-3O-g3C">
                         <barButtonItem key="leftBarButtonItem" image="h_icon" id="0d3-JE-qjQ">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="HamButtonTapped:" destination="UCg-ya-HXh" id="8Bq-hR-90b"/>
                             </connections>
@@ -299,6 +300,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sHE-cW-EnX">
                         <barButtonItem key="leftBarButtonItem" image="h_icon" id="PJv-Sd-t3d">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="HamButtonTapped:" destination="rEX-6j-TmR" id="wO9-Ef-RGj"/>
                             </connections>
@@ -477,6 +479,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="p6m-Me-vJQ">
                         <barButtonItem key="leftBarButtonItem" image="h_icon" id="qRE-fi-lEa">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="HamButtonPressed:" destination="esJ-gi-fG9" id="afr-Oa-pLZ"/>
                             </connections>
