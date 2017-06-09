@@ -73,6 +73,13 @@ class PickFromListViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
+    /*override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            list.remove(at: indexPath.row)
+        }
+        itemListTableView.reloadData()
+    }*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="Pick from list"

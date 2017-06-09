@@ -60,7 +60,7 @@ class DiceRollViewController: UIViewController {
             let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
             rotationAnimation.fromValue = 0.0
             rotationAnimation.toValue = Double.pi
-            rotationAnimation.duration = 0.4
+            rotationAnimation.duration = 0.2
             self.dice_2_1.layer.add(rotationAnimation, forKey: nil)
             self.dice_2_2.layer.add(rotationAnimation, forKey: nil)
             
