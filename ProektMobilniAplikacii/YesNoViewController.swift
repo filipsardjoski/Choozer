@@ -33,35 +33,46 @@ class YesNoViewController: UIViewController {
         choise = Int(arc4random_uniform(2)) + 1
         if (choise == 2) { //Yes
             if (position == 2) { //full circle
-                for _ in 0...3 {
-                    UIView.animate(withDuration: 0.5, animations: {
+                for _ in 0...7 {
+                    UIView.animate(withDuration: 1, animations: {
                         self.like0.transform = self.like0.transform.rotated(by: CGFloat(Double.pi))
                     })
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.YesNoLabel.text = "Yes!!"
                 }
             } else {
-                for _ in 0...2 {
-                    UIView.animate(withDuration: 0.5, animations: {
+                for _ in 0...6 {
+                    UIView.animate(withDuration: 1, animations: {
                         self.like0.transform = self.like0.transform.rotated(by: CGFloat(Double.pi))
                     })
                 }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.YesNoLabel.text = "Yes!!"
+                }
             }
-            self.YesNoLabel.text = "Yes!!"
+            
             position = 2
         } else { //No
             if (position == 1) { //full circle
-                for _ in 0...3 {
-                    UIView.animate(withDuration: 0.5, animations: {
+                for _ in 0...7 {
+                    UIView.animate(withDuration: 1, animations: {
                         self.like0.transform = self.like0.transform.rotated(by: CGFloat(Double.pi))
                     })
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.YesNoLabel.text = "No!!"
                 }
             } else {
-                for _ in 0...2 {
-                    UIView.animate(withDuration: 0.5, animations: {
+                for _ in 0...6 {
+                    UIView.animate(withDuration: 1, animations: {
                         self.like0.transform = self.like0.transform.rotated(by: CGFloat(Double.pi))
                     })
                 }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.YesNoLabel.text = "No!!"
+                }
             }
-            self.YesNoLabel.text = "No!!"
             position = 1
         }
         self.outl.isHidden=false
