@@ -11,7 +11,7 @@ import MMDrawerController
 
 class HamburgerTableViewController: UITableViewController {
     
-    var Meni: [String] = ["Coin flip","Dice roll","Yes/No", "Red/Black", "Pick from List"]
+    var Meni: [String] = ["Coin flip","Dice roll","Yes/No", "Roulette", "Pick from List"]
     
     
     
@@ -119,7 +119,7 @@ class HamburgerTableViewController: UITableViewController {
             
         case 3:
             
-            let centerViewController = self.storyboard?.instantiateViewController(withIdentifier: "RedBlackViewController") as! RedBlackViewController
+            let centerViewController = self.storyboard?.instantiateViewController(withIdentifier: "RouletteViewController") as! RouletteViewController
             let centerNavController = UINavigationController(rootViewController: centerViewController)
             let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
             
