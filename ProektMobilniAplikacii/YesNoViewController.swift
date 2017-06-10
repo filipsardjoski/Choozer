@@ -40,6 +40,7 @@ class YesNoViewController: UIViewController {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.YesNoLabel.text = "Yes!!"
+                     self.outl.isHidden=false
                 }
             } else {
                 for _ in 0...6 {
@@ -49,6 +50,7 @@ class YesNoViewController: UIViewController {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.YesNoLabel.text = "Yes!!"
+                     self.outl.isHidden=false
                 }
             }
             
@@ -62,6 +64,7 @@ class YesNoViewController: UIViewController {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.YesNoLabel.text = "No!!"
+                    self.outl.isHidden=false
                 }
             } else {
                 for _ in 0...6 {
@@ -71,11 +74,12 @@ class YesNoViewController: UIViewController {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.YesNoLabel.text = "No!!"
+                    self.outl.isHidden=false
                 }
             }
             position = 1
         }
-        self.outl.isHidden=false
+        //self.outl.isHidden=false
     }
     
     override func viewDidLoad() {
