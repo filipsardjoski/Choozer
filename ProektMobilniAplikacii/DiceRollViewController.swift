@@ -67,7 +67,7 @@ class DiceRollViewController: UIViewController {
             for _ in 1...10 {
                 randomNumber = Int(arc4random_uniform(6)) + 1
             }
-            var temp = randomNumber
+            let temp = randomNumber
             dice_2_1.image = UIImage (named: String("dice\(randomNumber)"))
             for _ in 1...10 {
                 randomNumber = Int(arc4random_uniform(6)) + 1
