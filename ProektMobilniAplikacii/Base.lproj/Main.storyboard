@@ -499,6 +499,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="button" destination="bLo-Si-9KQ" id="NKa-ul-20l"/>
                         <outlet property="dice_1" destination="rRv-Zy-glN" id="2HG-Xi-aQb"/>
                         <outlet property="dice_2_1" destination="yK9-ZT-Y22" id="c69-m5-eMa"/>
                         <outlet property="dice_2_2" destination="KYB-Z5-2u0" id="sGl-TH-5Qb"/>

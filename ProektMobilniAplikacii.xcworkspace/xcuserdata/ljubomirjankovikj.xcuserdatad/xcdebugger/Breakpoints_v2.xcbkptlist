@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProektMobilniAplikacii/DiceRollViewController.swift"
-            timestampString = "516196506.968224"
+            timestampString = "518751135.654562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "DiceRollViewController"
-            landmarkType = "3">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "segmentedPickerPressed(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -18,6 +18,7 @@ class DiceRollViewController: UIViewController {
     @IBOutlet weak var dice_2_1: UIImageView!
     @IBOutlet weak var dice_2_2: UIImageView!
     @IBOutlet weak var dice_1: UIImageView!
+    @IBOutlet weak var button: UIButton!
     
     var numberOfDice : Int = 1
     
@@ -42,6 +43,7 @@ class DiceRollViewController: UIViewController {
     }
     
     @IBAction func rollDicePressed(_ sender: Any) {
+        button.isHidden=true
         if (numberOfDice == 1) { //1 Die
             var randomNumber : Int = 0
             for _ in 1...10 {
@@ -55,6 +57,9 @@ class DiceRollViewController: UIViewController {
             self.dice_1.layer.add(rotationAnimation, forKey: nil)
             
             dice_1.image = UIImage (named: String("dice\(randomNumber)"))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
+            self.button.isHidden=false
+            }
         } else { //2 Dice
             var randomNumber : Int = 0
             let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
@@ -74,6 +79,9 @@ class DiceRollViewController: UIViewController {
             }
             resultLabel.text = "It's a \(temp), and it's a \(randomNumber)"
             dice_2_2.image = UIImage (named: String("dice\(randomNumber)"))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
+                self.button.isHidden=false
+            }
         }
     }
     
@@ -94,6 +102,7 @@ class DiceRollViewController: UIViewController {
         segmentedPicker.selectedSegmentIndex = 0
         numberOfDice = 1
         
+        button.isHidden=false
         dice_2_1.isHidden = true
         dice_2_2.isHidden = true
         dice_1.isHidden = false
