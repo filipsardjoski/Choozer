@@ -8,6 +8,7 @@
 
 import UIKit
 import MMDrawerController
+import AVFoundation
 
 
 class DiceRollViewController: UIViewController {
@@ -19,6 +20,7 @@ class DiceRollViewController: UIViewController {
     @IBOutlet weak var dice_2_2: UIImageView!
     @IBOutlet weak var dice_1: UIImageView!
     @IBOutlet weak var button: UIButton!
+     var audioPlayer = AVAudioPlayer()
     
     var numberOfDice : Int = 1
     
@@ -26,6 +28,8 @@ class DiceRollViewController: UIViewController {
     
     
     @IBAction func segmentedPickerPressed(_ sender: Any) {
+        
+        
         numberOfDice = segmentedPicker.selectedSegmentIndex + 1
         //RANDOMISE
         if (numberOfDice == 1) { //1 Die
@@ -46,6 +50,30 @@ class DiceRollViewController: UIViewController {
     }
     
     @IBAction func rollDicePressed(_ sender: Any) {
+        
+        // Set the sound file name & extension
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "diceroll", ofType: "wav")!)
+        
+        do {
+            // Preperation
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch _ {
+        }
+        
+        // Play the sound
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+        } catch _{
+        }
+        
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        
+        
         button.isHidden=true
         if (numberOfDice == 1) { //1 Die
             var randomNumber : Int = 0
