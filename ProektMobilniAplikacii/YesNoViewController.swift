@@ -8,12 +8,15 @@
 
 import UIKit
 import MMDrawerController
+import AVFoundation
 
 class YesNoViewController: UIViewController {
     
     @IBOutlet weak var like0: UIImageView!
     @IBOutlet weak var outl: UIButton!
     @IBOutlet weak var YesNoLabel: UILabel!
+     var audioPlayer = AVAudioPlayer()
+
     
     
     @IBAction func HamButtonTapped(_ sender: Any) {
@@ -26,6 +29,30 @@ class YesNoViewController: UIViewController {
     var position : Int = 2 //2 - Yes | 1 - No
     
     @IBAction func PickButtonIsPressed(_ sender: Any) {
+        
+        // Set the sound file name & extension
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "woosh", ofType: "wav")!)
+        
+        do {
+            // Preperation
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch _ {
+        }
+        
+        // Play the sound
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+        } catch _{
+        }
+        
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+
+        
         outl.isHidden=true
         self.like0.isHidden=false
         YesNoLabel.text=""
