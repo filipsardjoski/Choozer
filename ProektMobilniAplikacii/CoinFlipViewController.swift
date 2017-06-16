@@ -43,8 +43,8 @@ class CoinFlipViewController: UIViewController {
             //self.heads.isHidden=true
             //self.tails.isHidden=true
             //self.gifce.isHidden=false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                // do after 1.5s
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
+                // do after 1.4s
                 self.CoinFlipLabel.text = "Heads!!"
                 self.gifce.isHidden=true
                 self.heads.isHidden=false
@@ -57,8 +57,8 @@ class CoinFlipViewController: UIViewController {
             //self.heads.isHidden=true
             //self.tails.isHidden=true
             //self.gifce.isHidden=false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                // do after 1.5s
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
+                // do after 1.4s
                 self.CoinFlipLabel.text = "Tails!!"
                 self.gifce.isHidden=true
                 self.tails.isHidden=false
@@ -72,7 +72,6 @@ class CoinFlipViewController: UIViewController {
         super.viewDidLoad()
         self.title="Coin flip"
         CoinFlipLabel.text=""
-        
         self.view.backgroundColor = UIColor.black
         gifce.loadGif(name: "coin")
         gifce.isHidden=true

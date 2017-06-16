@@ -364,14 +364,14 @@
                                     <action selector="FlipButtonIsPressed:" destination="NJg-p3-UY1" eventType="touchUpInside" id="dpb-Ar-Cwu"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heads" translatesAutoresizingMaskIntoConstraints="NO" id="rD9-ub-YfG">
-                                <rect key="frame" x="97" y="256" width="180" height="170"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opas" translatesAutoresizingMaskIntoConstraints="NO" id="rD9-ub-YfG">
+                                <rect key="frame" x="99" y="244" width="180" height="170"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tails" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Vc-Y3w">
-                                <rect key="frame" x="97" y="256" width="180" height="170"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glava" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Vc-Y3w">
+                                <rect key="frame" x="99" y="243" width="180" height="170"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-Au-AU8">
-                                <rect key="frame" x="97" y="256" width="181" height="171"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-Au-AU8">
+                                <rect key="frame" x="99" y="244" width="180" height="170"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -564,11 +564,11 @@
         <image name="Like-icon" width="120" height="120"/>
         <image name="RedBlackBackground" width="1500" height="1500"/>
         <image name="WoodFine0007_L" width="3000" height="2075"/>
+        <image name="glava" width="373" height="365"/>
         <image name="h_icon" width="32" height="31"/>
-        <image name="heads" width="374" height="365"/>
+        <image name="opas" width="368" height="362"/>
         <image name="refresh-256" width="256" height="256"/>
         <image name="roulette" width="782" height="782"/>
-        <image name="tails" width="374" height="365"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>
