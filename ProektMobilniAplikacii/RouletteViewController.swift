@@ -8,6 +8,8 @@
 
 import UIKit
 import MMDrawerController
+import AVFoundation
+
 
 class RouletteViewController: UIViewController {
     
@@ -23,8 +25,32 @@ class RouletteViewController: UIViewController {
     @IBOutlet weak var roulette: UIImageView!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var buttonOutlet: UIButton!
+    var audioPlayer = AVAudioPlayer()
+
     
     @IBAction func pickButtonPressed(_ sender: Any) {
+        
+        // Set the sound file name & extension
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "Roule", ofType: "mp3")!)
+        
+        do {
+            // Preperation
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch _ {
+        }
+        
+        // Play the sound
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+        } catch _{
+        }
+        
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
         
         buttonOutlet.isHidden=true
         startLabel.isHidden=true
