@@ -32,6 +32,8 @@ class RouletteViewController: UIViewController {
         
         colorView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         
+        self.colorView.backgroundColor = UIColor.white
+        
         UIView.animate(withDuration: 1,
                        delay: 0,
                        usingSpringWithDamping: 0.1,
