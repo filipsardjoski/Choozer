@@ -165,11 +165,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProektMobilniAplikacii/CoinFlipViewController.swift"
-            timestampString = "517368221.423441"
+            timestampString = "519315376.226464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "HamButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>

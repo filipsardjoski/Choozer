@@ -8,6 +8,7 @@
 
 import UIKit
 import MMDrawerController
+import AVFoundation
 
 
 class CoinFlipViewController: UIViewController {
@@ -25,12 +26,39 @@ class CoinFlipViewController: UIViewController {
     
     @IBOutlet weak var CoinFlipLabel: UILabel!
     @IBOutlet weak var outl: UIButton!
+    var audioPlayer = AVAudioPlayer()
     
     
     var coin : Int = 0 //0 - Heads | 1 - Tails
     
     
     @IBAction func FlipButtonIsPressed(_ sender: Any) {
+        
+        // Set the sound file name & extension
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "coinflip", ofType: "wav")!)
+        
+        do {
+            // Preperation
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch _ {
+        }
+        
+        // Play the sound
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+        } catch _{
+        }
+        
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        
+        
+        
+        
         outl.isHidden=true
         self.heads.isHidden=true
         self.tails.isHidden=true
@@ -38,13 +66,21 @@ class CoinFlipViewController: UIViewController {
         coin = Int(arc4random_uniform(2))
         CoinFlipLabel.text=""
        
+        
+        
+      
+        
+        
+        
+        
+        
         if (coin == 0) { //Heads
             //CoinFlipLabel.text = "Heads"
             //self.heads.isHidden=true
             //self.tails.isHidden=true
             //self.gifce.isHidden=false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
-                // do after 1.4s
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.78) {
+                // do after 0.78s
                 self.CoinFlipLabel.text = "Heads!!"
                 self.gifce.isHidden=true
                 self.heads.isHidden=false
@@ -57,8 +93,8 @@ class CoinFlipViewController: UIViewController {
             //self.heads.isHidden=true
             //self.tails.isHidden=true
             //self.gifce.isHidden=false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
-                // do after 1.4s
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.78) {
+                // do after 0.78s
                 self.CoinFlipLabel.text = "Tails!!"
                 self.gifce.isHidden=true
                 self.tails.isHidden=false
