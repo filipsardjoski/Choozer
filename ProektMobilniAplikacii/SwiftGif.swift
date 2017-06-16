@@ -96,7 +96,7 @@ extension UIImage {
             delay = 0.1 // Make sure they're not too fast
         }
         
-        return delay*0.25 // DELETE 0.25 FOR NORMAL SPEED OF GIF
+        return delay*0.125// DELETE 0.25 FOR NORMAL SPEED OF GIF
     }
     
     internal class func gcdForPair(_ a: Int?, _ b: Int?) -> Int {

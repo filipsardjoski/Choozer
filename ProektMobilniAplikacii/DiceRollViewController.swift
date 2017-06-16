@@ -22,6 +22,9 @@ class DiceRollViewController: UIViewController {
     
     var numberOfDice : Int = 1
     
+  
+    
+    
     @IBAction func segmentedPickerPressed(_ sender: Any) {
         numberOfDice = segmentedPicker.selectedSegmentIndex + 1
         //RANDOMISE
@@ -112,7 +115,10 @@ class DiceRollViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+   
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

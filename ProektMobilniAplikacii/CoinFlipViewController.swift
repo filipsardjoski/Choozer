@@ -74,7 +74,7 @@ class CoinFlipViewController: UIViewController {
         CoinFlipLabel.text=""
         
         self.view.backgroundColor = UIColor.black
-        gifce.loadGif(name: "he")
+        gifce.loadGif(name: "coin")
         gifce.isHidden=true
         heads.isHidden=false
         tails.isHidden=true
