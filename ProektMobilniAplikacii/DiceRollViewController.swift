@@ -38,14 +38,17 @@ class DiceRollViewController: UIViewController {
             dice_1.isHidden = false
             let randomNumber = Int(arc4random_uniform(6)) + 1
             dice_1.image = UIImage (named: String("dice\(randomNumber)"))
+            resultLabel.text = "It's a \(randomNumber)"
         } else { //2 Dice
             dice_2_1.isHidden = false
             dice_2_2.isHidden = false
             dice_1.isHidden = true
             var randomNumber = Int(arc4random_uniform(6)) + 1
             dice_2_1.image = UIImage (named: String("dice\(randomNumber)"))
+            let temp = randomNumber
             randomNumber = Int(arc4random_uniform(6)) + 1
             dice_2_2.image = UIImage (named: String("dice\(randomNumber)"))
+            resultLabel.text = "It's a \(temp), and it's a \(randomNumber)"
         }
     }
     
