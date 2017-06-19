@@ -11,7 +11,7 @@ import MMDrawerController
 
 class HamburgerTableViewController: UITableViewController {
     
-    var Meni: [String] = ["Coin flip","Dice roll","Yes/No", "Roulette", "Pick from List"]
+    var Meni: [String] = ["Coin flip","Dice roll","Yes/No", "Roulette", "Pick from List","More"]
     
     
     
@@ -131,6 +131,18 @@ class HamburgerTableViewController: UITableViewController {
         case 4:
             
             let centerViewController = self.storyboard?.instantiateViewController(withIdentifier: "PickFromListViewController") as! PickFromListViewController
+            let centerNavController = UINavigationController(rootViewController: centerViewController)
+            let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            appDelegate.centerContainer!.centerViewController = centerNavController
+            appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
+            
+            break;
+            
+            
+        case 5:
+            
+            let centerViewController = self.storyboard?.instantiateViewController(withIdentifier: "MoreOptionsViewController") as! MoreOptionsViewController
             let centerNavController = UINavigationController(rootViewController: centerViewController)
             let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
             

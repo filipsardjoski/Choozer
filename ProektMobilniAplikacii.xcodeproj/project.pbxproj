@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21070AFC1EF7F0110090252A /* MoreOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21070AFB1EF7F0110090252A /* MoreOptionsViewController.swift */; };
 		2114A4AC1EF4130800EA29C1 /* coin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2114A4AB1EF4130800EA29C1 /* coin.gif */; };
 		2114A4AE1EF41F8F00EA29C1 /* coinflip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2114A4AD1EF41F8F00EA29C1 /* coinflip.wav */; };
 		2114A4B01EF4245900EA29C1 /* diceroll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2114A4AF1EF4245900EA29C1 /* diceroll.wav */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21070AFB1EF7F0110090252A /* MoreOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsViewController.swift; sourceTree = "<group>"; };
 		2114A4AB1EF4130800EA29C1 /* coin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coin.gif; sourceTree = "<group>"; };
 		2114A4AD1EF41F8F00EA29C1 /* coinflip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coinflip.wav; sourceTree = "<group>"; };
 		2114A4AF1EF4245900EA29C1 /* diceroll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = diceroll.wav; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				D166040E1E81631D00E25BDE /* AppDelegate.swift */,
+				21070AFB1EF7F0110090252A /* MoreOptionsViewController.swift */,
 				D1C42FD21ED45567002E45DC /* HamburgerTableViewController.swift */,
 				21E488D31ED6677D00140C53 /* SwiftGif.swift */,
 				D119D41A1E84784800854FCB /* Menu */,
@@ -444,6 +447,7 @@
 				21E488D41ED6677D00140C53 /* SwiftGif.swift in Sources */,
 				D16604111E81631D00E25BDE /* MenuViewController.swift in Sources */,
 				D16604471E8171AB00E25BDE /* PickFromListTableViewCell.swift in Sources */,
+				21070AFC1EF7F0110090252A /* MoreOptionsViewController.swift in Sources */,
 				D166043D1E8163E400E25BDE /* CoinFlipViewController.swift in Sources */,
 				D166040F1E81631D00E25BDE /* AppDelegate.swift in Sources */,
 				D16604431E816EAC00E25BDE /* YesNoViewController.swift in Sources */,

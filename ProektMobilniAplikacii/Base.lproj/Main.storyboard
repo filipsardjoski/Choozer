@@ -325,6 +325,48 @@
             </objects>
             <point key="canvasLocation" x="-2452" y="2557.8710644677662"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x9A-ZL-qdQ">
+            <objects>
+                <navigationController id="aqK-Si-nST" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sTd-Kv-Wqi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U2d-Hd-V55" kind="relationship" relationship="rootViewController" id="jey-fn-Ise"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPN-Tb-DsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3460" y="3224"/>
+        </scene>
+        <!--More Options View Controller-->
+        <scene sceneID="qis-OU-m1e">
+            <objects>
+                <viewController storyboardIdentifier="MoreOptionsViewController" id="U2d-Hd-V55" customClass="MoreOptionsViewController" customModule="ProektMobilniAplikacii" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Um1-TA-EBd"/>
+                        <viewControllerLayoutGuide type="bottom" id="788-oA-Qmv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o5C-Im-ZlO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YEY-SJ-GKj">
+                        <barButtonItem key="leftBarButtonItem" image="h_icon" id="1XL-6P-FQa">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="Button:" destination="U2d-Hd-V55" id="Lka-bl-Hl9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ta-yc-ahS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2458" y="3228"/>
+        </scene>
         <!--Title-->
         <scene sceneID="tTM-p7-1FK">
             <objects>
