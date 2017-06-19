@@ -11,7 +11,7 @@
 		2114A4AC1EF4130800EA29C1 /* coin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2114A4AB1EF4130800EA29C1 /* coin.gif */; };
 		2114A4AE1EF41F8F00EA29C1 /* coinflip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2114A4AD1EF41F8F00EA29C1 /* coinflip.wav */; };
 		2114A4B01EF4245900EA29C1 /* diceroll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2114A4AF1EF4245900EA29C1 /* diceroll.wav */; };
-		21B2A3D01EF480B600C75D61 /* Roule.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21B2A3CF1EF480B600C75D61 /* Roule.mp3 */; };
+		21B22AC71EF878440074D3A3 /* Roule.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21B22AC61EF878440074D3A3 /* Roule.mp3 */; };
 		21B2A3D21EF4916100C75D61 /* woosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 21B2A3D11EF4916100C75D61 /* woosh.wav */; };
 		21E488D11ED666EA00140C53 /* he.gif in Resources */ = {isa = PBXBuildFile; fileRef = 21E488CF1ED666EA00140C53 /* he.gif */; };
 		21E488D41ED6677D00140C53 /* SwiftGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E488D31ED6677D00140C53 /* SwiftGif.swift */; };
@@ -60,7 +60,7 @@
 		2114A4AB1EF4130800EA29C1 /* coin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = coin.gif; sourceTree = "<group>"; };
 		2114A4AD1EF41F8F00EA29C1 /* coinflip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coinflip.wav; sourceTree = "<group>"; };
 		2114A4AF1EF4245900EA29C1 /* diceroll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = diceroll.wav; sourceTree = "<group>"; };
-		21B2A3CF1EF480B600C75D61 /* Roule.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Roule.mp3; sourceTree = "<group>"; };
+		21B22AC61EF878440074D3A3 /* Roule.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Roule.mp3; sourceTree = "<group>"; };
 		21B2A3D11EF4916100C75D61 /* woosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = woosh.wav; sourceTree = "<group>"; };
 		21E488CF1ED666EA00140C53 /* he.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = he.gif; sourceTree = "<group>"; };
 		21E488D31ED6677D00140C53 /* SwiftGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGif.swift; sourceTree = "<group>"; };
@@ -254,8 +254,8 @@
 		D1EF09AF1EF84600006A05AE /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				21B22AC61EF878440074D3A3 /* Roule.mp3 */,
 				21B2A3D11EF4916100C75D61 /* woosh.wav */,
-				21B2A3CF1EF480B600C75D61 /* Roule.mp3 */,
 				2114A4AD1EF41F8F00EA29C1 /* coinflip.wav */,
 				2114A4AF1EF4245900EA29C1 /* diceroll.wav */,
 			);
@@ -386,13 +386,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16604191E81631D00E25BDE /* LaunchScreen.storyboard in Resources */,
+				21B22AC71EF878440074D3A3 /* Roule.mp3 in Resources */,
 				D16604161E81631D00E25BDE /* Assets.xcassets in Resources */,
 				2114A4B01EF4245900EA29C1 /* diceroll.wav in Resources */,
 				2114A4AE1EF41F8F00EA29C1 /* coinflip.wav in Resources */,
 				21B2A3D21EF4916100C75D61 /* woosh.wav in Resources */,
 				2114A4AC1EF4130800EA29C1 /* coin.gif in Resources */,
 				D16604141E81631D00E25BDE /* Main.storyboard in Resources */,
-				21B2A3D01EF480B600C75D61 /* Roule.mp3 in Resources */,
 				21E488D11ED666EA00140C53 /* he.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
