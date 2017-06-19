@@ -8,38 +8,35 @@
 
 import UIKit
 import MMDrawerController
+import CoreData
 
 
 class MoreOptionsViewController: UIViewController {
-    
     
     @IBAction func Button(_ sender: Any) {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
-        
     }
 
+    @IBOutlet weak var soundSwitch: UISwitch!
+    @IBAction func soundChanged(_ sender: Any) {
+        //soundSwitch.isOn
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title="More"
         // Do any additional setup after loading the view.
+        
+        //check for sound
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

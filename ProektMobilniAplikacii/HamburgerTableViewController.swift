@@ -11,7 +11,7 @@ import MMDrawerController
 
 class HamburgerTableViewController: UITableViewController {
     
-    var Meni: [String] = ["Coin flip","Dice roll","Yes/No", "Roulette", "Pick from List","More"]
+    var Meni: [String] = ["Coin flip","Dice roll","Yes/No", "Roulette", "Pick from List", "More"]
     
     
     

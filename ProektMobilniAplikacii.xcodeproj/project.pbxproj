@@ -29,6 +29,12 @@
 		D16604451E816FCF00E25BDE /* PickFromListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16604441E816FCF00E25BDE /* PickFromListViewController.swift */; };
 		D16604471E8171AB00E25BDE /* PickFromListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16604461E8171AB00E25BDE /* PickFromListTableViewCell.swift */; };
 		D1C42FD31ED45567002E45DC /* HamburgerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C42FD21ED45567002E45DC /* HamburgerTableViewController.swift */; };
+		D1EF09AE1EF8422A006A05AE /* Sound.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1EF09AC1EF8422A006A05AE /* Sound.xcdatamodeld */; };
+		D1EF09B11EF85764006A05AE /* CoinFlipHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EF09B01EF85764006A05AE /* CoinFlipHelpViewController.swift */; };
+		D1EF09B31EF85788006A05AE /* DiceRollHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EF09B21EF85788006A05AE /* DiceRollHelpViewController.swift */; };
+		D1EF09B51EF857A3006A05AE /* RouletteHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EF09B41EF857A3006A05AE /* RouletteHelpViewController.swift */; };
+		D1EF09B71EF857AC006A05AE /* YesNoHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EF09B61EF857AC006A05AE /* YesNoHelpViewController.swift */; };
+		D1EF09B91EF857B5006A05AE /* PickFromListHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EF09B81EF857B5006A05AE /* PickFromListHelpViewController.swift */; };
 		EB4AFD466A7F2E9DF6DEFCFC /* Pods_ProektMobilniAplikacii.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6FE0333C54EE1642A05619 /* Pods_ProektMobilniAplikacii.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +89,12 @@
 		D16604441E816FCF00E25BDE /* PickFromListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickFromListViewController.swift; sourceTree = "<group>"; };
 		D16604461E8171AB00E25BDE /* PickFromListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickFromListTableViewCell.swift; sourceTree = "<group>"; };
 		D1C42FD21ED45567002E45DC /* HamburgerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerTableViewController.swift; sourceTree = "<group>"; };
+		D1EF09AD1EF8422A006A05AE /* Sound.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sound.xcdatamodel; sourceTree = "<group>"; };
+		D1EF09B01EF85764006A05AE /* CoinFlipHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinFlipHelpViewController.swift; sourceTree = "<group>"; };
+		D1EF09B21EF85788006A05AE /* DiceRollHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceRollHelpViewController.swift; sourceTree = "<group>"; };
+		D1EF09B41EF857A3006A05AE /* RouletteHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouletteHelpViewController.swift; sourceTree = "<group>"; };
+		D1EF09B61EF857AC006A05AE /* YesNoHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoHelpViewController.swift; sourceTree = "<group>"; };
+		D1EF09B81EF857B5006A05AE /* PickFromListHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickFromListHelpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				D166043C1E8163E400E25BDE /* CoinFlipViewController.swift */,
+				D1EF09B01EF85764006A05AE /* CoinFlipHelpViewController.swift */,
 			);
 			name = CoinFlip;
 			sourceTree = "<group>";
@@ -140,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				D166043E1E8166A000E25BDE /* DiceRollViewController.swift */,
+				D1EF09B21EF85788006A05AE /* DiceRollHelpViewController.swift */,
 			);
 			name = DiceRoll;
 			sourceTree = "<group>";
@@ -148,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D16604401E816BA700E25BDE /* RouletteViewController.swift */,
+				D1EF09B41EF857A3006A05AE /* RouletteHelpViewController.swift */,
 			);
 			name = Roulette;
 			sourceTree = "<group>";
@@ -156,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				D16604421E816EAC00E25BDE /* YesNoViewController.swift */,
+				D1EF09B61EF857AC006A05AE /* YesNoHelpViewController.swift */,
 			);
 			name = YesNo;
 			sourceTree = "<group>";
@@ -196,11 +212,9 @@
 				D119D41E1E8478B400854FCB /* YesNo */,
 				D19D52B61E83FF9D0069E10C /* PickFromList */,
 				D16604121E81631D00E25BDE /* Main.storyboard */,
+				D1EF09AC1EF8422A006A05AE /* Sound.xcdatamodeld */,
 				D16604151E81631D00E25BDE /* Assets.xcassets */,
-				21B2A3D11EF4916100C75D61 /* woosh.wav */,
-				21B2A3CF1EF480B600C75D61 /* Roule.mp3 */,
-				2114A4AD1EF41F8F00EA29C1 /* coinflip.wav */,
-				2114A4AF1EF4245900EA29C1 /* diceroll.wav */,
+				D1EF09AF1EF84600006A05AE /* Sounds */,
 				2114A4AB1EF4130800EA29C1 /* coin.gif */,
 				21E488CF1ED666EA00140C53 /* he.gif */,
 				D16604171E81631D00E25BDE /* LaunchScreen.storyboard */,
@@ -232,8 +246,20 @@
 			children = (
 				D16604441E816FCF00E25BDE /* PickFromListViewController.swift */,
 				D16604461E8171AB00E25BDE /* PickFromListTableViewCell.swift */,
+				D1EF09B81EF857B5006A05AE /* PickFromListHelpViewController.swift */,
 			);
 			name = PickFromList;
+			sourceTree = "<group>";
+		};
+		D1EF09AF1EF84600006A05AE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				21B2A3D11EF4916100C75D61 /* woosh.wav */,
+				21B2A3CF1EF480B600C75D61 /* Roule.mp3 */,
+				2114A4AD1EF41F8F00EA29C1 /* coinflip.wav */,
+				2114A4AF1EF4245900EA29C1 /* diceroll.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		E24C42085385A7B10254AD68 /* Frameworks */ = {
@@ -440,6 +466,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1EF09B51EF857A3006A05AE /* RouletteHelpViewController.swift in Sources */,
+				D1EF09B91EF857B5006A05AE /* PickFromListHelpViewController.swift in Sources */,
+				D1EF09B11EF85764006A05AE /* CoinFlipHelpViewController.swift in Sources */,
 				D1C42FD31ED45567002E45DC /* HamburgerTableViewController.swift in Sources */,
 				D166043F1E8166A000E25BDE /* DiceRollViewController.swift in Sources */,
 				D16604411E816BA700E25BDE /* RouletteViewController.swift in Sources */,
@@ -451,6 +480,9 @@
 				D166043D1E8163E400E25BDE /* CoinFlipViewController.swift in Sources */,
 				D166040F1E81631D00E25BDE /* AppDelegate.swift in Sources */,
 				D16604431E816EAC00E25BDE /* YesNoViewController.swift in Sources */,
+				D1EF09B31EF85788006A05AE /* DiceRollHelpViewController.swift in Sources */,
+				D1EF09B71EF857AC006A05AE /* YesNoHelpViewController.swift in Sources */,
+				D1EF09AE1EF8422A006A05AE /* Sound.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +756,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D1EF09AC1EF8422A006A05AE /* Sound.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D1EF09AD1EF8422A006A05AE /* Sound.xcdatamodel */,
+			);
+			currentVersion = D1EF09AD1EF8422A006A05AE /* Sound.xcdatamodel */;
+			path = Sound.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D16604031E81631D00E25BDE /* Project object */;
 }
