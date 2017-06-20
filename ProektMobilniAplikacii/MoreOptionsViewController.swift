@@ -21,7 +21,11 @@ class MoreOptionsViewController: UIViewController {
 
     @IBOutlet weak var soundSwitch: UISwitch!
     @IBAction func soundChanged(_ sender: Any) {
-        //soundSwitch.isOn
+        if (soundSwitch.isOn == true) { //Sound - ON - true
+            UserDefaults.standard.setValue(true, forKey: "sound")
+        } else { //Sound - OFF - false
+            UserDefaults.standard.setValue(false, forKey: "sound")
+        }
     }
     
     override func viewDidLoad() {
@@ -30,8 +34,11 @@ class MoreOptionsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //check for sound
-        
-        
+        if (UserDefaults.standard.value(forKey: "sound") as! Bool == true) { //Sound - ON
+            soundSwitch.setOn(true, animated: false)
+        } else { //Sound - OFF
+            soundSwitch.setOn(false, animated: false)
+        }
     }
 
     override func didReceiveMemoryWarning() {

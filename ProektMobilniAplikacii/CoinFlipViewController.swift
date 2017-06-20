@@ -16,8 +16,6 @@ class CoinFlipViewController: UIViewController {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
-        
-
     }
     
     @IBOutlet weak var gifce: UIImageView!
@@ -48,13 +46,16 @@ class CoinFlipViewController: UIViewController {
         }
         
         // Play the sound
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
-        } catch _{
-        }
         
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
+        if (UserDefaults.standard.value(forKey: "sound") as! Bool == true) { //Sound - ON
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+            
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        }
         
         
         
@@ -107,6 +108,16 @@ class CoinFlipViewController: UIViewController {
         heads.isHidden=false
         tails.isHidden=true
         // Do any additional setup after loading the view.
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            //Not first launch
+        } else {
+            //First launch
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            UserDefaults.standard.set(true, forKey: "sound")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

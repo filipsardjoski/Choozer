@@ -43,15 +43,17 @@ class YesNoViewController: UIViewController {
         } catch _ {
         }
         
-        // Play the sound
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
-        } catch _{
-        }
         
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
-
+        if (UserDefaults.standard.value(forKey: "sound") as! Bool == true) { //Sound - ON
+                // Play the sound
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+            } catch _{
+            }
+        
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        }
         
         outl.isHidden=true
         self.like0.isHidden=false
