@@ -67,13 +67,6 @@ class CoinFlipViewController: UIViewController {
         CoinFlipLabel.text=""
        
         
-        
-      
-        
-        
-        
-        
-        
         if (coin == 0) { //Heads
             //CoinFlipLabel.text = "Heads"
             //self.heads.isHidden=true
