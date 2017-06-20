@@ -19,6 +19,7 @@ class PickFromListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -78,7 +79,7 @@ class PickFromListTableViewController: UITableViewController {
     }
     
     func getRandomItem () -> String {
-        var temp = Int(arc4random_uniform(UInt32(items.count)))
+        let temp = Int(arc4random_uniform(UInt32(items.count)))
         return items[temp]
     }
     
