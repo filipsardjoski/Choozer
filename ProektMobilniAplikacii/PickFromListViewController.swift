@@ -7,84 +7,82 @@
 //
 
 import UIKit
+import CoreData
+import Foundation
 import MMDrawerController
 
-class PickFromListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CellButtonPressed {
+class PickFromListViewController: UIViewController {
     
+    var listItems : [PickFromListItem] = []
     
     @IBAction func HamButtonTapped(_ sender: Any) {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
     }
-    var choise : Int = 0
-    var list : [String] = []
     
-    @IBOutlet weak var insertItemTextField: UITextField!
-    @IBOutlet weak var itemListTableView: UITableView!
-    @IBOutlet weak var pickedItemLabel: UILabel!
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @IBAction func insertItemButtonIsPressed(_ sender: Any) {
-        list.append(insertItemTextField.text!)
-        itemListTableView.reloadData()
-        insertItemTextField.text = ""
-    }
+    var tableViewController : PickFromListTableViewController! = nil
     
-    @IBAction func pickOneButtonIsPressed(_ sender: Any) {
-        
-        //Ako nema proverkava crashnuva app
-        if (list.count>1){
-        let random = arc4random_uniform(UInt32(list.count))
-        pickedItemLabel.text = list[Int(random)]
-        self.insertItemTextField.resignFirstResponder()
-        }
-        else{
-        insertItemTextField.text=""
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? PickFromListTableViewController, segue.identifier == "pickFromListEmbedSegue" {
+            self.tableViewController = vc
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func didPressCellButton(_ sender: Any) {
+    @IBAction func addButtonPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Add Item", message: "", preferredStyle: .alert)
         
-    }
-    
-    func deleteCell (cell: UITableViewCell) {
-        let deletionIndexPath = itemListTableView.indexPath(for: cell)
-        itemListTableView.deleteRows(at: [deletionIndexPath!], with: .automatic)
+        alert.addTextField(configurationHandler: nil)
         
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            //CORE DATA PROBLEM
+            /*
+            let textFieldtext = alert?.textFields?[0].text!
+            if (textFieldtext != "") {
+                let newItem = NSEntityDescription.insertNewObject(forEntityName: "PickFromListItem", into: self.context)
+                newItem.setValue(textFieldtext! as! String, forKey: "itemName")
+                do {
+                    try self.context.save()
+                } catch {
+                    print ("Save Failed")
+                }
+                
+            }
+            */
+            self.tableViewController.reloadListData(temp: (alert?.textFields?[0].text!)!)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+    @IBAction func clearButtonPressed(_ sender: Any) {
+        self.tableViewController.clearData()
     }
     
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.itemListTableView.dequeueReusableCell(withIdentifier: "PickFromListIdentifier") as! PickFromListTableViewCell
-        cell.delegate = self
-        cell.itemLabel.text = list[indexPath.row]
-        cell.myTableViewController = self
-        return cell
-    }
-    
-    /*override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            list.remove(at: indexPath.row)
+    @IBAction func decideButtonPressed(_ sender: Any) {
+        if (self.tableViewController.anyItems() == true) {
+            let chosenOne = self.tableViewController.getRandomItem()
+            let alert = UIAlertController(title: "The chosen one is:", message: chosenOne, preferredStyle: .alert)
+        
+            alert.addAction(UIAlertAction(title: "Thank you!", style: .default, handler: nil))
+        
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Add some items first", message: "", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Will do!", style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
         }
-        itemListTableView.reloadData()
-    }*/
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="Pick from list"
-        self.itemListTableView.delegate = self
-        self.itemListTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 }
