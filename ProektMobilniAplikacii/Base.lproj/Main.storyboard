@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owz-IN-kbc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owz-IN-kbc">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kbb-pH-Cci" id="Urd-Sv-e3r">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="reuseIdentifier"/>
@@ -162,16 +162,6 @@
                                 <action selector="HamButtonTapped:" destination="UCg-ya-HXh" id="8Bq-hR-90b"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="WF6-0p-BLP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hu0-HN-0vz">
-                                <rect key="frame" x="221" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Help"/>
-                            </button>
-                            <connections>
-                                <segue destination="s8c-ur-KcQ" kind="show" id="pc9-m9-kdJ"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="buttonOutlet" destination="G7A-E9-ISD" id="spj-RZ-LfP"/>
@@ -184,37 +174,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VsJ-Ic-K65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2424.375" y="939.08450704225356"/>
-        </scene>
-        <!--Roulette Help View Controller-->
-        <scene sceneID="b7w-bh-v3n">
-            <objects>
-                <viewController id="s8c-ur-KcQ" customClass="RouletteHelpViewController" customModule="ProektMobilniAplikacii" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eMf-Sl-UkT"/>
-                        <viewControllerLayoutGuide type="bottom" id="pTR-Pu-EAb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ej1-3K-Opf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation for roulette" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kU-MU-r0v">
-                                <rect key="frame" x="0.0" y="164" width="414" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="6kU-MU-r0v" secondAttribute="trailing" id="5Ln-S8-9tu"/>
-                            <constraint firstItem="6kU-MU-r0v" firstAttribute="top" secondItem="eMf-Sl-UkT" secondAttribute="bottom" constant="100" id="i4g-0o-JgZ"/>
-                            <constraint firstItem="6kU-MU-r0v" firstAttribute="leading" secondItem="ej1-3K-Opf" secondAttribute="leading" id="wwl-Vk-HBn"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UkA-Da-uu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1551" y="942"/>
         </scene>
         <!--Yes No View Controller-->
         <scene sceneID="6o5-RQ-qEA">
@@ -257,16 +216,6 @@
                                 <action selector="HamButtonTapped:" destination="L3e-0S-VxP" id="xT2-nn-zqz"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="rbF-2W-Lpp">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JJn-Jm-Ulh">
-                                <rect key="frame" x="665" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Help"/>
-                            </button>
-                            <connections>
-                                <segue destination="Aeg-7J-o6a" kind="show" id="eUn-hy-Nq9"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="YesNoLabel" destination="MKF-I1-REc" id="oGK-y4-TY3"/>
@@ -277,37 +226,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyn-lT-4eP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2452" y="1764"/>
-        </scene>
-        <!--Yes No Help View Controller-->
-        <scene sceneID="rL1-p7-8AX">
-            <objects>
-                <viewController id="Aeg-7J-o6a" customClass="YesNoHelpViewController" customModule="ProektMobilniAplikacii" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rN7-gt-771"/>
-                        <viewControllerLayoutGuide type="bottom" id="TxM-Ur-VIY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2ef-Zt-T0Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation for yes/no" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HP-Ks-1lA">
-                                <rect key="frame" x="0.0" y="164" width="414" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="8HP-Ks-1lA" firstAttribute="top" secondItem="rN7-gt-771" secondAttribute="bottom" constant="100" id="5n3-zC-Kiv"/>
-                            <constraint firstAttribute="trailing" secondItem="8HP-Ks-1lA" secondAttribute="trailing" id="NSI-dX-fPn"/>
-                            <constraint firstItem="8HP-Ks-1lA" firstAttribute="leading" secondItem="2ef-Zt-T0Y" secondAttribute="leading" id="ycU-DN-u4T"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5vb-rQ-G6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1551" y="1764"/>
         </scene>
         <!--Pick From List View Controller-->
         <scene sceneID="MtB-lc-k1Q">
@@ -345,7 +263,7 @@
                                         <rect key="frame" x="0.0" y="28" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EY1-zH-oZ7" id="e7J-g7-qty">
-                                            <rect key="frame" x="0.0" y="0.0" width="276" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="276" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mun-4Z-hwi">
@@ -396,15 +314,16 @@
                                 <action selector="HamButtonTapped:" destination="rEX-6j-TmR" id="wO9-Ef-RGj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="CMa-wT-uLR">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gV1-J6-BY5">
-                                <rect key="frame" x="221" y="7" width="83" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="keo-9r-Tv8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w7o-Nn-H6L">
+                                <rect key="frame" x="348" y="2" width="46" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Help"/>
+                                <connections>
+                                    <segue destination="6Ny-V6-9cZ" kind="show" id="XEL-i5-rXN"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="6Ny-V6-9cZ" kind="show" id="qPO-wz-FRs"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -592,16 +511,6 @@
                                 <action selector="HamButtonTapped:" destination="NJg-p3-UY1" id="ckg-ci-lMk"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="iVS-qN-tHK">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N2z-11-i30">
-                                <rect key="frame" x="258" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Help"/>
-                                <connections>
-                                    <segue destination="Yhy-OJ-9OY" kind="show" id="hWI-uH-58O"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="CoinFlipLabel" destination="slP-VT-gOf" id="xhi-Dt-xmE"/>
@@ -614,37 +523,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ce4-w6-jpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2452" y="-663.41829085457277"/>
-        </scene>
-        <!--Coin Flip Help View Controller-->
-        <scene sceneID="Sbm-N9-L4G">
-            <objects>
-                <viewController id="Yhy-OJ-9OY" customClass="CoinFlipHelpViewController" customModule="ProektMobilniAplikacii" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="F8w-LZ-kJ0"/>
-                        <viewControllerLayoutGuide type="bottom" id="zeN-QK-mu2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bhI-2f-HAq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation for coin flip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8D-eN-pyj">
-                                <rect key="frame" x="0.0" y="164" width="414" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="d8D-eN-pyj" secondAttribute="trailing" id="A9v-Nv-aLa"/>
-                            <constraint firstItem="d8D-eN-pyj" firstAttribute="leading" secondItem="bhI-2f-HAq" secondAttribute="leading" id="FoC-Vf-z4O"/>
-                            <constraint firstItem="d8D-eN-pyj" firstAttribute="top" secondItem="F8w-LZ-kJ0" secondAttribute="bottom" constant="100" id="Wom-gy-eVu"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AMr-7K-rOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1551.2" y="-664.31784107946032"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="drA-T8-gSr">
@@ -728,16 +606,6 @@
                                 <action selector="HamButtonPressed:" destination="esJ-gi-fG9" id="afr-Oa-pLZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="229-Dx-goB">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BaU-FS-eCT">
-                                <rect key="frame" x="221" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Help"/>
-                            </button>
-                            <connections>
-                                <segue destination="fqZ-nD-P1Q" kind="show" id="2Fz-cZ-QJF"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="button" destination="bLo-Si-9KQ" id="NKa-ul-20l"/>
@@ -751,37 +619,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rof-8z-ggF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2415.1999999999998" y="142.57871064467767"/>
-        </scene>
-        <!--Dice Roll Help View Controller-->
-        <scene sceneID="UDg-Tq-gZ6">
-            <objects>
-                <viewController id="fqZ-nD-P1Q" customClass="DiceRollHelpViewController" customModule="ProektMobilniAplikacii" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yb5-xY-Eey"/>
-                        <viewControllerLayoutGuide type="bottom" id="k2K-vs-0BD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Wci-IZ-Hpt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explanation for dice roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAK-4A-hES">
-                                <rect key="frame" x="0.0" y="164" width="414" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tAK-4A-hES" firstAttribute="top" secondItem="yb5-xY-Eey" secondAttribute="bottom" constant="100" id="bkl-vH-oVD"/>
-                            <constraint firstAttribute="trailing" secondItem="tAK-4A-hES" secondAttribute="trailing" id="blk-3h-NDd"/>
-                            <constraint firstItem="tAK-4A-hES" firstAttribute="leading" secondItem="Wci-IZ-Hpt" secondAttribute="leading" id="tBg-xy-RNx"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fth-TT-46z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1551.2" y="142.57871064467767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YXt-Pv-ABr">
