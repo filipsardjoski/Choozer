@@ -20,6 +20,11 @@ class PickFromListViewController: UIViewController {
         appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
     }
     
+    
+    @IBAction func helpButtonTapped(_ sender: Any) {
+        helpAlerts()
+    }
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var tableViewController : PickFromListTableViewController! = nil
@@ -80,6 +85,22 @@ class PickFromListViewController: UIViewController {
         }
     }
     
+    
+    
+    func helpAlerts () {
+        let alert = UIAlertController(title: "Add items using the 'Add' button, then click Choose and I'll magicly select the chosen one from your list.", message: "", preferredStyle: .alert)
+        
+        let thanksAction = UIAlertAction (title: "Thanks!", style: .default) { (action:UIAlertAction!) in
+            let secoundAlert = UIAlertController(title: "Also, you can swipe left on any item to delete it", message: "", preferredStyle: .alert)
+            secoundAlert.addAction(UIAlertAction(title: "Thanks again!", style: .default, handler: nil))
+            self.present(secoundAlert, animated: true, completion: nil)
+        }
+
+        alert.addAction(thanksAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title="Pick from list"
@@ -90,14 +111,9 @@ class PickFromListViewController: UIViewController {
             
         } else {
             //First launch
+            
             UserDefaults.standard.set(true, forKey: "launchedPickFromListBefore")
-            let alert = UIAlertController(title: "Single items can be deleted by swiping left ;)", message: "", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Thanks!", style: .default, handler: nil))
-            
-            self.present(alert, animated: true, completion: nil)
-            
-            
+            helpAlerts()
         }
         
         

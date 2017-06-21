@@ -290,6 +290,16 @@
                                 <action selector="HamButtonTapped:" destination="rEX-6j-TmR" id="wO9-Ef-RGj"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="5We-D0-kNM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k1J-pg-UIX">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Help"/>
+                                <connections>
+                                    <action selector="helpButtonTapped:" destination="rEX-6j-TmR" eventType="touchUpInside" id="Fkh-IW-vAH"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROJ-tn-OzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,6 +414,16 @@
                             <connections>
                                 <action selector="Button:" destination="U2d-Hd-V55" id="Lka-bl-Hl9"/>
                             </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NLn-oi-GIi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LBP-6E-bJ4">
+                                <rect key="frame" x="228" y="7" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I need a tip"/>
+                                <connections>
+                                    <action selector="tipButtonTapped:" destination="U2d-Hd-V55" eventType="touchUpInside" id="eNB-Wh-Lup"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

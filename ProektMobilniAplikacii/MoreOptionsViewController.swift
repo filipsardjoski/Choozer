@@ -18,6 +18,11 @@ class MoreOptionsViewController: UIViewController {
         
         appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func tipButtonTapped(_ sender: Any) {
+        tipAlert()
+    }
 
     @IBOutlet weak var soundSwitch: UISwitch!
     @IBAction func soundChanged(_ sender: Any) {
@@ -26,6 +31,14 @@ class MoreOptionsViewController: UIViewController {
         } else { //Sound - OFF - false
             UserDefaults.standard.setValue(false, forKey: "sound")
         }
+    }
+    
+    func tipAlert () {
+        let alert = UIAlertController(title: "A quick tip:", message: "If you don't want to press the refresh button, simply shake your device ;)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Thanks!", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -47,13 +60,7 @@ class MoreOptionsViewController: UIViewController {
         } else {
             //First launch
             UserDefaults.standard.set(true, forKey: "launchedMoreBefore")
-            let alert = UIAlertController(title: "A quick tip:", message: "If you don't want to press the refresh button, simply shake your device ;)", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Thanks!", style: .default, handler: nil))
-            
-            self.present(alert, animated: true, completion: nil)
-            
-            
+            tipAlert()
         }
 
         
