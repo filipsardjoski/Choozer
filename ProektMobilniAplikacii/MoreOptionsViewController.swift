@@ -46,7 +46,7 @@ class MoreOptionsViewController: UIViewController {
             
         } else {
             //First launch
-            UserDefaults.standard.set(true, forKey: "launchedPickFromListBefore")
+            UserDefaults.standard.set(true, forKey: "launchedMoreBefore")
             let alert = UIAlertController(title: "A quick tip:", message: "If you don't want to press the refresh button, simply shake your device ;)", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Thanks!", style: .default, handler: nil))
