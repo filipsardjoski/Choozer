@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owz-IN-kbc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owz-IN-kbc">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -290,11 +290,11 @@
                                 <action selector="HamButtonTapped:" destination="rEX-6j-TmR" id="wO9-Ef-RGj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="5We-D0-kNM">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k1J-pg-UIX">
-                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="5We-D0-kNM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k1J-pg-UIX">
+                                <rect key="frame" x="233" y="7" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Help"/>
+                                <state key="normal" title="Help" image="Cute-Ball-Help-icon"/>
                                 <connections>
                                     <action selector="helpButtonTapped:" destination="rEX-6j-TmR" eventType="touchUpInside" id="Fkh-IW-vAH"/>
                                 </connections>
@@ -416,10 +416,10 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="NLn-oi-GIi">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LBP-6E-bJ4">
-                                <rect key="frame" x="228" y="7" width="76" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LBP-6E-bJ4">
+                                <rect key="frame" x="228" y="7" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="I need a tip"/>
+                                <state key="normal" title="I need a tip" image="Cute-Ball-Help-icon"/>
                                 <connections>
                                     <action selector="tipButtonTapped:" destination="U2d-Hd-V55" eventType="touchUpInside" id="eNB-Wh-Lup"/>
                                 </connections>
@@ -649,6 +649,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cute-Ball-Help-icon" width="512" height="512"/>
         <image name="Like-icon" width="120" height="120"/>
         <image name="RedBlackBackground" width="1500" height="1500"/>
         <image name="WoodFine0007_L" width="3000" height="2075"/>
