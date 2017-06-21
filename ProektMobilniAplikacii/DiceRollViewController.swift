@@ -134,6 +134,7 @@ class DiceRollViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.becomeFirstResponder()
         self.title = "Dice Roll"
         segmentedPicker.selectedSegmentIndex = 0
         numberOfDice = 1
@@ -155,6 +156,85 @@ class DiceRollViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print("Why are you shaking me?")
+            // Set the sound file name & extension
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "diceroll", ofType: "wav")!)
+            
+            do {
+                // Preperation
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            } catch _ {
+            }
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch _ {
+            }
+            
+            
+            if (UserDefaults.standard.value(forKey: "sound") as! Bool == true) { //Sound - ON
+                // Play the sound
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+                } catch _{
+                }
+                
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
+            }
+            
+            button.isHidden=true
+            if (numberOfDice == 1) { //1 Die
+                var randomNumber : Int = 0
+                for _ in 1...10 {
+                    randomNumber = Int(arc4random_uniform(6)) + 1
+                }
+                resultLabel.text = "It's a \(randomNumber)"
+                let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+                rotationAnimation.fromValue = 0.0
+                rotationAnimation.toValue = Double.pi
+                rotationAnimation.duration = 0.2
+                self.dice_1.layer.add(rotationAnimation, forKey: nil)
+                
+                dice_1.image = UIImage (named: String("dice\(randomNumber)"))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
+                    self.button.isHidden=false
+                }
+            } else { //2 Dice
+                var randomNumber : Int = 0
+                let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+                rotationAnimation.fromValue = 0.0
+                rotationAnimation.toValue = Double.pi
+                rotationAnimation.duration = 0.2
+                self.dice_2_1.layer.add(rotationAnimation, forKey: nil)
+                self.dice_2_2.layer.add(rotationAnimation, forKey: nil)
+                
+                for _ in 1...10 {
+                    randomNumber = Int(arc4random_uniform(6)) + 1
+                }
+                let temp = randomNumber
+                dice_2_1.image = UIImage (named: String("dice\(randomNumber)"))
+                for _ in 1...10 {
+                    randomNumber = Int(arc4random_uniform(6)) + 1
+                }
+                resultLabel.text = "It's a \(temp), and it's a \(randomNumber)"
+                dice_2_2.image = UIImage (named: String("dice\(randomNumber)"))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
+                    self.button.isHidden=false
+                }
+            }
+        }
     }
 
 }
