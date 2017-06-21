@@ -348,11 +348,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationLevel="1" indentationWidth="15" reuseIdentifier="pickFromListCell" id="M4L-ct-Cai" userLabel="pickFromListCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationLevel="1" indentationWidth="15" reuseIdentifier="pickFromListCell" id="M4L-ct-Cai" userLabel="pickFromListCell">
                                 <rect key="frame" x="0.0" y="28" width="331" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="pickFromListReuseIdentifier" tableViewCell="M4L-ct-Cai" id="2if-gm-vSO">
-                                    <rect key="frame" x="0.0" y="0.0" width="331" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="331" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
