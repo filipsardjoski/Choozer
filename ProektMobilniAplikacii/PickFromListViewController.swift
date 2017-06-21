@@ -72,7 +72,7 @@ class PickFromListViewController: UIViewController {
         
             self.present(alert, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Add some items first", message: "", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Add some items first!", message: "", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Will do!", style: .default, handler: nil))
             
