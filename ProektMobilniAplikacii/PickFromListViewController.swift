@@ -84,6 +84,25 @@ class PickFromListViewController: UIViewController {
         super.viewDidLoad()
         self.title="Pick from list"
         
+        let launchedPickFromListBefore = UserDefaults.standard.bool(forKey: "launchedPickFromListBefore")
+        if launchedPickFromListBefore  {
+            //Not first launch
+            
+        } else {
+            //First launch
+            UserDefaults.standard.set(true, forKey: "launchedPickFromListBefore")
+            let alert = UIAlertController(title: "Single items can be deleted by swiping left ;)", message: "", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Thanks!", style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            
+        }
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 }
