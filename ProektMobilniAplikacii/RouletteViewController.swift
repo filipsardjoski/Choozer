@@ -135,6 +135,18 @@ class RouletteViewController: UIViewController {
                 }
     }
     
+    @IBAction func TipButtonPressed(_ sender: Any) {
+        tipAlert()
+    }
+    func tipAlert () {
+        let alert = UIAlertController(title: "A quick tip:", message: "If you don't want to press the refresh button, simply shake your device ;)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Thanks!", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()

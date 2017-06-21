@@ -181,13 +181,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProektMobilniAplikacii/DiceRollViewController.swift"
-            timestampString = "519700098.314244"
+            timestampString = "519775780.204441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "DiceRollViewController"
-            landmarkType = "3">
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "canBecomeFirstResponder"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -213,12 +213,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProektMobilniAplikacii/CoinFlipViewController.swift"
-            timestampString = "519699847.548033"
+            timestampString = "519775443.329716"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "motionEnded(_:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
