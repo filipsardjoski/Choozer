@@ -41,21 +41,17 @@ class PickFromListViewController: UIViewController {
         alert.addTextField(configurationHandler: nil)
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            //CORE DATA PROBLEM
-            /*
             let textFieldtext = alert?.textFields?[0].text!
             if (textFieldtext != "") {
                 let newItem = NSEntityDescription.insertNewObject(forEntityName: "PickFromListItem", into: self.context)
-                newItem.setValue(textFieldtext! as! String, forKey: "itemName")
+                newItem.setValue(textFieldtext!, forKey: "itemName")
                 do {
                     try self.context.save()
                 } catch {
                     print ("Save Failed")
                 }
-                
             }
-            */
-            self.tableViewController.reloadListData(temp: (alert?.textFields?[0].text!)!)
+            self.tableViewController.reloadListData()
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
@@ -64,7 +60,21 @@ class PickFromListViewController: UIViewController {
     }
     
     @IBAction func clearButtonPressed(_ sender: Any) {
-        self.tableViewController.clearData()
+        if (self.tableViewController.anyItems() == true) {
+            let alert = UIAlertController(title: "Sure?", message: "If you click 'Yes' all items in the list will be deleted", preferredStyle: .alert)
+            
+            let yesAction = UIAlertAction (title : "Yes", style: .default) { (action: UIAlertAction!) in
+                self.tableViewController.clearData()
+            }
+            
+            let noAction = UIAlertAction (title: "No", style: .default, handler: nil)
+            
+            alert.addAction(yesAction)
+            alert.addAction(noAction)
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
     }
     
     
@@ -90,7 +100,7 @@ class PickFromListViewController: UIViewController {
     func helpAlerts () {
         let alert = UIAlertController(title: "Add items using the 'Add' button, then click Choose and I'll magicly select the chosen one from your list.", message: "", preferredStyle: .alert)
         
-        let thanksAction = UIAlertAction (title: "Thanks!", style: .default) { (action:UIAlertAction!) in
+        let thanksAction = UIAlertAction (title: "Thanks!", style: .default) { (action: UIAlertAction!) in
             let secoundAlert = UIAlertController(title: "Also, you can swipe left on any item to delete it", message: "", preferredStyle: .alert)
             secoundAlert.addAction(UIAlertAction(title: "Thanks again!", style: .default, handler: nil))
             self.present(secoundAlert, animated: true, completion: nil)

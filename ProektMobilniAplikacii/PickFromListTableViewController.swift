@@ -13,14 +13,12 @@ class PickFromListTableViewController: UITableViewController {
 
     
     var listItems : [PickFromListItem] = []
-    var items : [String] = []
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        reloadListData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,7 +40,7 @@ class PickFromListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return items.count
+        return listItems.count
     }
 
     
@@ -50,64 +48,61 @@ class PickFromListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pickFromListCell", for: indexPath)
 
         // Configure the cell...
-        //cell.textLabel?.text = listItems[indexPath.row] as! String
-        cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.text = listItems[indexPath.row].itemName
         
         return cell
     }
     
-    func reloadListData(temp : String) {
-        items.append(temp)
-        //CORE DATA PROBLEM
-        /*
+    func reloadListData() {
         do {
             listItems = try context.fetch(PickFromListItem.fetchRequest())
         }
         catch {
             print("Fetching Failed")
         }
-        */
         tableView.reloadData()
     }
     
     func clearData () {
-        items.removeAll()
-        
-        //ADD CORE DATA IMPLEMENTATION
-        
+        for i in listItems {
+            context.delete(i)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        }
+        do {
+            listItems = try context.fetch(PickFromListItem.fetchRequest())
+        }
+        catch {
+            print("Fetching Failed")
+        }
         tableView.reloadData()
     }
     
     func getRandomItem () -> String {
-        let temp = Int(arc4random_uniform(UInt32(items.count)))
-        return items[temp]
+        let temp = Int(arc4random_uniform(UInt32(listItems.count)))
+        return listItems[temp].itemName!
     }
     
     func anyItems () -> Bool {
-        if (items.count != 0) {
+        if (listItems.count != 0) {
             return true
         }
         return false
     }
     
-    //DELETE INDIVIDUAL CELLS
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            items.remove(at: indexPath.row)
+            listItems.remove(at: indexPath.row)
             
-            //CORE DATA PROBLEM
-            /*
-            let item = items[indexPath.row]
+            let item = listItems[indexPath.row]
             context.delete(item)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
             do {
-                items = try context.fetch(Item.fetchRequest())
+                listItems = try context.fetch(PickFromListItem.fetchRequest())
             }
             catch {
                 print("Fetching Failed")
             }
-             */
         }
         tableView.reloadData()
     }
