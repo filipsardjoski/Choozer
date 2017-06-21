@@ -83,7 +83,7 @@ class RouletteViewController: UIViewController {
         //roulette animation
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.fromValue = 0.0
-        rotationAnimation.toValue = Double.pi
+        rotationAnimation.toValue = Double.pi * 2
         rotationAnimation.duration = 1
         self.roulette.layer.add(rotationAnimation, forKey: nil)
         
