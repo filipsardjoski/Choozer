@@ -31,7 +31,7 @@ class YesNoViewController: UIViewController {
     @IBAction func PickButtonIsPressed(_ sender: Any) {
         
         // Set the sound file name & extension
-        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "woosh", ofType: "wav")!)
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "wooshh", ofType: "mp3")!)
         
         do {
             // Preperation
