@@ -154,7 +154,7 @@ class YesNoViewController: UIViewController {
         if motion == .motionShake {
             print("Why are you shaking me?")
             // Set the sound file name & extension
-            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "woosh", ofType: "wav")!)
+            let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "wooshh", ofType: "mp3")!)
             
             do {
                 // Preperation

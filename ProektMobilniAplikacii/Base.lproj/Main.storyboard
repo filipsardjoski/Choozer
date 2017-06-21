@@ -627,7 +627,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="TipButtonPressed" destination="wz0-TW-5pQ" id="AP0-DK-gx0"/>
                         <outlet property="button" destination="bLo-Si-9KQ" id="NKa-ul-20l"/>
                         <outlet property="dice_1" destination="rRv-Zy-glN" id="2HG-Xi-aQb"/>
                         <outlet property="dice_2_1" destination="yK9-ZT-Y22" id="c69-m5-eMa"/>
