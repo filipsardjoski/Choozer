@@ -96,6 +96,7 @@ class PickFromListTableViewController: UITableViewController {
             context.delete(item)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
+            //Fatch data without deleted cell
             do {
                 listItems = try context.fetch(PickFromListItem.fetchRequest())
             }
