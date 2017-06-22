@@ -91,7 +91,6 @@ class PickFromListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            listItems.remove(at: indexPath.row)
             
             let item = listItems[indexPath.row]
             context.delete(item)
