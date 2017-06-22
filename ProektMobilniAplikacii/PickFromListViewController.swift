@@ -21,6 +21,7 @@ class PickFromListViewController: UIViewController {
         appDelegate.centerContainer!.toggle(MMDrawerSide.left, animated: true, completion: nil)
     }
     
+    @IBOutlet weak var clearLastPick: UIButton!
     
     @IBAction func helpButtonTapped(_ sender: Any) {
         helpAlerts()
@@ -88,6 +89,7 @@ class PickFromListViewController: UIViewController {
         
             self.present(alert, animated: true, completion: nil)
             
+            clearLastPick.isHidden = false
             UserDefaults.standard.set(chosenOne, forKey: "lastP")
             lastPickedLabel.text=UserDefaults.standard.string(forKey: "lastP")
             
@@ -102,6 +104,7 @@ class PickFromListViewController: UIViewController {
     
     @IBAction func clearLastPickLabelButtonPressed(_ sender: Any) {
         UserDefaults.standard.set("", forKey: "lastP")
+        clearLastPick.isHidden = true
         lastPickedLabel.text=UserDefaults.standard.string(forKey: "lastP")
     }
     
@@ -131,12 +134,17 @@ class PickFromListViewController: UIViewController {
             
         } else {
             //First launch
-            
             UserDefaults.standard.set(true, forKey: "launchedPickFromListBefore")
             helpAlerts()
         }
         
+        if (UserDefaults.standard.string(forKey: "lastP") == "") {
+            clearLastPick.isHidden = true
+        } else {
+            clearLastPick.isHidden = false
+        }
         lastPickedLabel.text=UserDefaults.standard.string(forKey: "lastP")
+        
         
         
         // Do any additional setup after loading the view.

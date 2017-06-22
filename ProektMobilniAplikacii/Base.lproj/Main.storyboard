@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owz-IN-kbc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="owz-IN-kbc">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kbb-pH-Cci" id="Urd-Sv-e3r">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="reuseIdentifier"/>
@@ -351,6 +351,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="clearLastPick" destination="3Nk-hh-R85" id="HLQ-Fy-uGy"/>
                         <outlet property="lastPickedLabel" destination="p7P-d5-Myc" id="cbG-WA-NgR"/>
                     </connections>
                 </viewController>
@@ -372,7 +373,7 @@
                                 <rect key="frame" x="0.0" y="28" width="365" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="pickFromListReuseIdentifier" tableViewCell="M4L-ct-Cai" id="2if-gm-vSO">
-                                    <rect key="frame" x="0.0" y="0.0" width="365" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="365" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
@@ -469,7 +470,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="NLn-oi-GIi">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LBP-6E-bJ4">
-                                <rect key="frame" x="269" y="4" width="35" height="35"/>
+                                <rect key="frame" x="359" y="4" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="I need a tip" image="Cute-Ball-Help-icon"/>
                                 <connections>
@@ -622,7 +623,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkH-J3-1tw">
-                                <rect key="frame" x="0.0" y="225" width="375" height="21"/>
+                                <rect key="frame" x="39" y="225" width="375" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -728,7 +729,7 @@
         <image name="clipboard" width="492" height="660"/>
         <image name="h_icon" width="32" height="31"/>
         <image name="heads" width="374" height="365"/>
-        <image name="history" width="140" height="128"/>
+        <image name="history" width="1000" height="1000"/>
         <image name="morepozadina" width="1919" height="3515"/>
         <image name="refresh-256" width="256" height="256"/>
         <image name="roulette" width="782" height="782"/>
