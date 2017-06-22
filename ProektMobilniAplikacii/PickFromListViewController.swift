@@ -14,6 +14,7 @@ import MMDrawerController
 class PickFromListViewController: UIViewController {
     
     var listItems : [PickFromListItem] = []
+    @IBOutlet weak var lastPickedLabel: UILabel!
     
     @IBAction func HamButtonTapped(_ sender: Any) {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -86,6 +87,10 @@ class PickFromListViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Thank you!", style: .default, handler: nil))
         
             self.present(alert, animated: true, completion: nil)
+            
+            UserDefaults.standard.set(chosenOne, forKey: "lastP")
+            lastPickedLabel.text=UserDefaults.standard.string(forKey: "lastP")
+            
         } else {
             let alert = UIAlertController(title: "Add some items first!", message: "", preferredStyle: .alert)
             
@@ -95,6 +100,10 @@ class PickFromListViewController: UIViewController {
         }
     }
     
+    @IBAction func clearLastPickLabelButtonPressed(_ sender: Any) {
+        UserDefaults.standard.set("", forKey: "lastP")
+        lastPickedLabel.text=UserDefaults.standard.string(forKey: "lastP")
+    }
     
     
     func helpAlerts () {
@@ -115,6 +124,7 @@ class PickFromListViewController: UIViewController {
         super.viewDidLoad()
         self.title="Pick from list"
         
+        
         let launchedPickFromListBefore = UserDefaults.standard.bool(forKey: "launchedPickFromListBefore")
         if launchedPickFromListBefore  {
             //Not first launch
@@ -126,7 +136,7 @@ class PickFromListViewController: UIViewController {
             helpAlerts()
         }
         
-        
+        lastPickedLabel.text=UserDefaults.standard.string(forKey: "lastP")
         
         
         // Do any additional setup after loading the view.
