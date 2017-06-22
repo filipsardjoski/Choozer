@@ -87,7 +87,7 @@ class RouletteViewController: UIViewController {
         rotationAnimation.duration = 1
         self.roulette.layer.add(rotationAnimation, forKey: nil)
         
-        let randomNumber = Int(arc4random_uniform(38)) + 1
+        let randomNumber = Int(arc4random_uniform(37)) + 1
         
         if (randomNumber == 0) { //00
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
